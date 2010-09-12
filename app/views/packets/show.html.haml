@@ -1,0 +1,10 @@
+%p
+  %b Name:
+  = @packet.name
+%p
+  %b Course:
+  = @packet.course_id
+
+= link_to 'Edit', edit_packet_path(@packet)
+\|
+= link_to 'Back', packets_path

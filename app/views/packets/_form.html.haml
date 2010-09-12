@@ -1,0 +1,16 @@
+= form_for @packet do |f|
+  -if @packet.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@packet.errors.count, "error")} prohibited this packet from being saved:"
+      %ul
+        - @packet.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :course_id
+    = f.text_field :course_id
+  .actions
+    = f.submit 'Save'

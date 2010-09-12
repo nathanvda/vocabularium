@@ -1,4 +1,8 @@
 Vocabularium::Application.routes.draw do
+  resources :packets
+
+  resources :courses
+
   devise_for :users
 
   get "home/index"

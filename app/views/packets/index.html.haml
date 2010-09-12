@@ -1,0 +1,21 @@
+%h1 Listing packets
+
+%table
+  %tr
+    %th Name
+    %th Course
+    %th
+    %th
+    %th
+
+  - @packets.each do |packet|
+    %tr
+      %td= packet.name
+      %td= packet.course_id
+      %td= link_to 'Show', packet
+      %td= link_to 'Edit', edit_packet_path(packet)
+      %td= link_to 'Destroy', packet, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New packet', new_packet_path
