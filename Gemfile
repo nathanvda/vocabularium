@@ -23,6 +23,12 @@ gem "jquery-rails"
 
 gem "on_the_spot"
 
+# needed for devise (to create haml-views
+gem "hpricot"
+gem "ruby_parser"
+
+gem 'matthuhiggins-foreigner', :require => 'foreigner'
+
 gem "rcov"
 
 # we need this here, see http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/

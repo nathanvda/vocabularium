@@ -3,8 +3,7 @@ class CreateWords < ActiveRecord::Migration
     create_table :words do |t|
       t.string :original
       t.string :translation
-      t.integer :packet_id
-
+      t.references :packet, :foreign_key => {:dependent => :destroy}
       t.timestamps
     end
   end

@@ -1,4 +1,6 @@
 class PacketsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /packets
   # GET /packets.xml
   def index

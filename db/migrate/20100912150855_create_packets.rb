@@ -2,8 +2,7 @@ class CreatePackets < ActiveRecord::Migration
   def self.up
     create_table :packets do |t|
       t.string :name
-      t.integer :course_id
-
+      t.references :course, :foreign_key => {:dependent => :destroy}
       t.timestamps
     end
   end

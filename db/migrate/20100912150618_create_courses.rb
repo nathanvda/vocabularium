@@ -3,10 +3,10 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.string :name
       t.string :description
-      t.integer :user_id
-
+      t.references :user, :foreign_key => {:dependent => :destroy}
       t.timestamps
     end
+
   end
 
   def self.down

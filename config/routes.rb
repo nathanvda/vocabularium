@@ -1,4 +1,5 @@
 Vocabularium::Application.routes.draw do
+
   resources :packets
 
   resources :courses
