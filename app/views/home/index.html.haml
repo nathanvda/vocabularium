@@ -1,2 +1,13 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h1 Vocbularium
+%p Hier kan je zelf je woordenlijsten samenstellen en overhoren.
+
+%h3 Werkwijze
+%p
+  Eerst voeg je een woordenlijst toe, met daarin woorden en hun vertaling. Je mag zoveel woorden als je wil toevoegen.
+  Je mag ook meerdere woordenlijsten toevoegen, zoveel als je wil.
+  Daarna kan je een test maken, door een aantal lijsten te selecteren, en uit die lijsten wordt je dan overhoord, naar keuze
+  over alle woorden of een selectie ervan.
+
+%h3 Kies wat je wil doen
+%p= link_to "Voeg een nieuwe woordenlijst toe", new_packet_path
+%p= link_to "Test jezelf", new_packet_path

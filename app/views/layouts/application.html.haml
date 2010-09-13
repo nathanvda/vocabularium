@@ -17,13 +17,13 @@
     = yield :head
   %body
     #banner
-      =image_tag 'your-logo.png'
       .the-title
         %h1
-          %p Your application
+          %span.hideText Your application
       #navigation
-      #user
+      #user_nav
         = render 'devise/menu/registration_items'
+        |
         = render 'devise/menu/login_items'
     #container
       #sidebar

@@ -27,6 +27,7 @@ class PacketsController < ApplicationController
   # GET /packets/new.xml
   def new
     @packet = Packet.new
+    @packet.words.build
 
     respond_to do |format|
       format.html # new.html.erb

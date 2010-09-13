@@ -7,10 +7,10 @@
           %li= msg
 
   .field
-    = f.label :name
+    = f.label :name, "Naam"
     = f.text_field :name
-  .field
-    = f.label :course_id
-    = f.text_field :course_id
+  = f.fields_for :words do |word_form|
+    = render :partial => 'word', :locals => { :word => word_form}
+  = link_to 'Voeg woord toe', :class => "add_word_link"
   .actions
-    = f.submit 'Save'
+    = f.submit 'Bewaar'

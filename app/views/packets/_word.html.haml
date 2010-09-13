@@ -1,0 +1,10 @@
+.field
+  = word.label :original
+  = word.text_field :original
+.field
+  = word.label :translation
+  = word.text_field :translation
+.field
+  - unless word.object.new_record?
+    = word.check_box '_delete'
+    = word.label '_delete', 'Remove'
