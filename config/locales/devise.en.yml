@@ -37,3 +37,8 @@ en:
         subject: 'Reset password instructions'
       unlock_instructions:
         subject: 'Unlock Instructions'
+    form:
+      password: 'Password'
+      password_confirmation: 'Password confirmation'
+      change_password: "Change password"
+      change_title: "Change your password"

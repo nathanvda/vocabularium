@@ -12,9 +12,9 @@
     %tr
       %td= packet.name
       %td= packet.course_id
-      %td= link_to 'Show', packet
-      %td= link_to 'Edit', edit_packet_path(packet)
-      %td= link_to 'Destroy', packet, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to t('common.show'), packet
+      %td= link_to t('common.edit'), edit_packet_path(packet)
+      %td= link_to t('common.destroy'), packet, :confirm => t('common.you_sure'), :method => :delete
 
 %br
 

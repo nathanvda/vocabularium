@@ -1,4 +1,4 @@
 - if user_signed_in?
-  = link_to('Logout', user_session_destroy_path)
+  = link_to('Afmelden', destroy_user_session_path)
 - else
-  = link_to('Login', user_session_path)
+  = link_to('Aanmelden', new_user_session_path)

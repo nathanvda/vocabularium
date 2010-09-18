@@ -1,10 +1,8 @@
-.field
-  = word.label :original
-  = word.text_field :original
-.field
-  = word.label :translation
-  = word.text_field :translation
-.field
-  - unless word.object.new_record?
-    = word.check_box '_delete'
-    = word.label '_delete', 'Remove'
+.fields
+  .field
+    = f.label :original, "Woord"
+    = f.text_field :original
+  .field
+    = f.label :translation, "Vertaling"
+    = f.text_field :translation
+    = remove_child_link "verwijderen", f

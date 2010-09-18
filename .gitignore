@@ -1,4 +1,18 @@
-.bundle
+config/config.yml
+config/database.yml
+
 db/*.sqlite3
 log/*.log
+tmp/*
 tmp/**/*
+
+# Rails' cache :
+public/stylesheets/all_1.css
+public/javascripts/all_1.js
+
+# metric_fu :
+scratch_directory
+
+# bundler
+.bundle
+vendor/cache

@@ -9,8 +9,17 @@
   .field
     = f.label :name, "Naam"
     = f.text_field :name
+
+  %h3 Woorden
+  %p Let er zeker op dat je de woorden correct invult, zodat je ook correct overhoord wordt.
+
   = f.fields_for :words do |word_form|
-    = render :partial => 'word', :locals => { :word => word_form}
-  = link_to 'Voeg woord toe', :class => "add_word_link"
+    = render :partial => 'word', :locals => { :f => word_form}
+
+  .field
+    = add_child_link 'Voeg woord toe', :words
+
+  = new_child_fields_template(f, :words)
+
   .actions
     = f.submit 'Bewaar'

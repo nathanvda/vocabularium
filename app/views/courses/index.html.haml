@@ -14,9 +14,9 @@
       %td= course.name
       %td= course.description
       %td= course.user_id
-      %td= link_to 'Show', course
-      %td= link_to 'Edit', edit_course_path(course)
-      %td= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to t('common.show'), course
+      %td= link_to t('common.edit'), edit_course_path(course)
+      %td= link_to t('common.destroy'), course, :confirm => t('common.you_sure'), :method => :delete
 
 %br
 

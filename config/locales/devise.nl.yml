@@ -1,0 +1,39 @@
+nl:
+  errors:
+    messages:
+      not_found: "niet gevonden"
+      already_confirmed: "was reeds bevestigd"
+      not_locked: "was niet gelocked"
+
+  devise:
+    failure:
+      unauthenticated: 'Je moet inloggen of registreren vooraleer je kan verdergaan'
+      unconfirmed: 'Je moet je account bevestigen vooraleer je kan verdergaan.'
+      locked: 'Je account is gelocked.'
+      invalid: 'Ongeldige email of paswoord'
+      invalid_token: 'Ongeldig authenticatie token.'
+      timeout: 'Je sessie is verlopen, gelieve opnieuw aan te melden om verder te gaan.'
+      inactive: 'Je account is nog niet geactiveerd.'
+    sessions:
+      signed_in: 'Succesvol aangemeld.'
+      signed_out: 'Succesvol afgemeld.'
+    passwords:
+      send_instructions: 'Je zal zo meteen een e-mail ontvangen met instructies hoe je je paswoord kan resetten.'
+      updated: 'Je paswoord is succesvol aangepast. Je bent nu aangemeld.'
+    confirmations:
+      send_instructions: 'Je zal zo meteen een e-mail ontvangen met instructies hoe je je account moet bevestigen.'
+      confirmed: 'Je account is succesvol bevestigd. Je bent nu aangemeld.'
+    registrations:
+      signed_up: 'Je bent nu geregisteerd. Indien zo ingesteld, is er een bevestiging gestuurd naar je e-mail.'
+      updated: 'Je hebt je account succesvol aangepast.'
+      destroyed: 'Dag! Je account is nu verwijderd. We hopen je snel weer te zien.'
+    unlocks:
+      send_instructions: 'Je zal zo meteen een e-mail ontvangen met instructies hoe je je account kan unlocken.'
+      unlocked: 'Jouw account is unlocked. Je bent nu aangemeld.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Bevestiging instructies'
+      reset_password_instructions:
+        subject: 'Reset paswoord instructies'
+      unlock_instructions:
+        subject: 'Unlock Instructies'

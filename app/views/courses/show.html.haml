@@ -1,13 +1,13 @@
 %p
-  %b Name:
+  %b Naam
   = @course.name
 %p
-  %b Description:
+  %b Beschrijving
   = @course.description
 %p
-  %b User:
-  = @course.user_id
+  %b Gebruiker:
+  = @course.user.email
 
-= link_to 'Edit', edit_course_path(@course)
+= link_to t('common.edit'), edit_course_path(@course)
 \|
-= link_to 'Back', courses_path
+= link_to t('common.back'), courses_path
