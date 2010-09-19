@@ -1,9 +1,13 @@
-%p
-  %b Name:
-  = @packet.name
-%p
-  %b Course:
-  = @packet.course_id
+%h3= "Woordelijst #{@packet.name}"
+
+%table
+  %tr
+    %th Woord
+    %th Vertaling
+  - @packet.words.each do |word|
+    %tr
+      %td= word.original
+      %td= word.translation
 
 = link_to t('common.edit'), edit_packet_path(@packet)
 \|

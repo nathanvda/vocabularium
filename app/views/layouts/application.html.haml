@@ -21,11 +21,14 @@
       .the-title
         %h1
           %span.hideText Your application
-      #navigation
       #user_nav
         = render 'devise/menu/registration_items'
         |
         = render 'devise/menu/login_items'
+      #navigation
+        .nav_link=link_to "Home", root_path
+        .nav_link=link_to "Woordenlijsten", packets_path
+        .nav_link=link_to "Overhoren", packets_path
     #container
       #sidebar
       #contents

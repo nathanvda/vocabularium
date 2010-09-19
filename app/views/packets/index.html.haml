@@ -1,21 +1,20 @@
-%h1 Listing packets
+%h1 Woordenlijsten
 
 %table
   %tr
-    %th Name
-    %th Course
-    %th
-    %th
+    %th Naam
+    %th Aantal woorden
     %th
 
   - @packets.each do |packet|
     %tr
       %td= packet.name
-      %td= packet.course_id
-      %td= link_to t('common.show'), packet
-      %td= link_to t('common.edit'), edit_packet_path(packet)
-      %td= link_to t('common.destroy'), packet, :confirm => t('common.you_sure'), :method => :delete
+      %td= packet.words.size
+      %td
+        = link_to t('common.show'), packet
+        = link_to t('common.edit'), edit_packet_path(packet)
+        = link_to t('common.destroy'), packet, :confirm => t('common.you_sure'), :method => :delete
 
 %br
 
-= link_to 'New packet', new_packet_path
+= link_to 'Nieuwe woordenlijst', new_packet_path

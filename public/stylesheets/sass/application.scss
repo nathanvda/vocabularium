@@ -50,21 +50,21 @@ body {
     }
 
     #navigation {
-        margin-top:5px;
+        margin-top:45px;
         clear:right;
         /*border:2px solid red;*/
         float:right;
         .nav_link {
             float:left;
             margin-right:2px;
-            background-image:url('/images/nav_button_xs.png');
-            width:96px;
+            background: #fff;
+            width:140px;
             height:16px;
             padding:2px;
+            text-align:center;
             a {
                 padding:2px;
-                padding-left:20px;
-                text-align:center;
+                padding-left:5px;
             }
         }
     }
