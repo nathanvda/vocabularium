@@ -24,7 +24,7 @@ nl:
       send_instructions: 'Je zal zo meteen een e-mail ontvangen met instructies hoe je je account moet bevestigen.'
       confirmed: 'Je account is succesvol bevestigd. Je bent nu aangemeld.'
     registrations:
-      signed_up: 'Je bent nu geregisteerd. Indien zo ingesteld, is er een bevestiging gestuurd naar je e-mail.'
+      signed_up: 'Je bent nu geregisteerd.'
       updated: 'Je hebt je account succesvol aangepast.'
       destroyed: 'Dag! Je account is nu verwijderd. We hopen je snel weer te zien.'
     unlocks:
@@ -37,3 +37,13 @@ nl:
         subject: 'Reset paswoord instructies'
       unlock_instructions:
         subject: 'Unlock Instructies'
+    form:
+      password: 'Paswoord'
+      password_confirmation: 'Paswoord bevestiging'
+      change_password: "Wijzig paswoord"
+      change_title: "Wijzig je paswoord"
+      sign_up: Registreer
+      change: 'Aanpassen'
+      remove_account: 'Verwijder mijn account'
+      fullname: "Volledige naam"
+      nickname: "Gebruikersnaam"

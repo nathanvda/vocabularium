@@ -3,7 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 
 #gem 'pg'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
+gem "mysql"
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -34,10 +35,6 @@ gem "rcov"
 # we need this here, see http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test do
   gem "rspec-rails", ">= 2.0.0.beta.18"
-end
-
-group :production do
-  gem "mysql"
 end
 
 # test-environment gems

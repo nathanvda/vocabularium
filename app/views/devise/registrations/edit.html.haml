@@ -2,25 +2,28 @@
   Wijzig #{resource_name.to_s.humanize}
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
-  %p
+  .field
     = f.label :email
-    %br/
     = f.text_field :email
-  %p
-    = f.label :password, 'Paswoord'
-    %i (laat leeg als je je paswoord niet wil wijzigen)
-    %br/
+  .field
+    = f.label :password, t('devise.form.password')
     = f.password_field :password
-  %p
-    = f.label :password_confirmation, 'Paswoord bevestiging'
-    %br/
+    %i (laat leeg als je je paswoord niet wil wijzigen)
+  .field
+    = f.label :password_confirmation, t('devise.form.password_confirmation')
     = f.password_field :password_confirmation
-  %p
+  .field
+    = f.label :name, t('devise.form.nickname')
+    = f.password_field :name
+  .field
+    = f.label :fullname, t('devise.form.fullname')
+    = f.password_field :fullname
+  .field
     = f.label :current_password, "Huidig paswoord"
-    %i (we hebben je huidige paswoord om je wijzigingen te bevestigen)
-    %br/
     = f.password_field :current_password
-  %p= f.submit "Aanpassen"
+    %i (we hebben je huidige paswoord om je wijzigingen te bevestigen)
+  .field
+    = f.submit "Aanpassen"
 %h3 Verwijder mijn account
 %p
   Ontevreden? #{link_to "Verwijder mijn account", registration_path(resource_name), :confirm => "Ben je zeker?", :method => :delete}.

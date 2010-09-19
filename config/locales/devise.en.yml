@@ -42,3 +42,4 @@ en:
       password_confirmation: 'Password confirmation'
       change_password: "Change password"
       change_title: "Change your password"
+      sign_up: 'Sign Up'
