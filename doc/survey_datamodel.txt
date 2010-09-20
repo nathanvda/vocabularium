@@ -1,0 +1,6 @@
+Describe the datamodel we need:
+- a survey has to be created first, and one has to choose which packets will be tested
+  --> we have a template to take a test, with a list of packets
+  --> SurveyTemplate: name, has_many :packets
+- when we take a test, we create a survey-instance, which has: date, current-question, score
+  - which has a list of questions, in a certain order, with an answer: survey_id, word_id, answer, is_correct

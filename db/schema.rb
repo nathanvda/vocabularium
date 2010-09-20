@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100912151239) do
+ActiveRecord::Schema.define(:version => 20100920202309) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,46 @@ ActiveRecord::Schema.define(:version => 20100912151239) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "survey_packets", :id => false, :force => true do |t|
+    t.integer "survey_id"
+    t.integer "packet_id"
+  end
+
+  add_index "survey_packets", ["survey_id", "packet_id"], :name => "index_surveys_packets_on_survey_id_and_packet_id"
+
+  create_table "survey_questions", :force => true do |t|
+    t.integer  "survey_taken_id"
+    t.integer  "order"
+    t.integer  "word_id"
+    t.string   "answer"
+    t.boolean  "is_correct"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "survey_questions", ["survey_taken_id"], :name => "index_survey_questions_on_survey_taken_id"
+
+  create_table "survey_takens", :force => true do |t|
+    t.integer  "survey_id"
+    t.float    "score"
+    t.integer  "nr_correct"
+    t.integer  "nr_questions"
+    t.integer  "current_question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "survey_takens", ["survey_id"], :name => "index_survey_takens_on_survey_id"
+
+  create_table "surveys", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "surveys", ["user_id"], :name => "index_surveys_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
