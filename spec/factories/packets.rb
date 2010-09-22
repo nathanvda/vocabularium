@@ -1,6 +1,14 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
-Factory.define :packet do |f|
-  f.name "MyString"
-  f.course_id 1
+Factory.sequence :packet_name do |n|
+  "MyPacket_#{n}"
 end
+
+Factory.define :packet do |f|
+  f.name Factory.next :packet_name
+end
+
+Factory.define :packet_with_two_words, :parent => :packet do |f|
+  f.after_create { |packet| packet.words << Factory(:word, :packet_id => packet.id)}
+end
+

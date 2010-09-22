@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 describe CoursesController do
+  include Devise::TestHelpers
+
+  before :each do
+    @user = Factory.create(:user)
+    sign_in @user
+  end
 
   def mock_course(stubs={})
     @mock_course ||= mock_model(Course, stubs).as_null_object

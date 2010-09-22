@@ -35,6 +35,7 @@ gem "rcov"
 # we need this here, see http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test do
   gem "rspec-rails", ">= 2.0.0.beta.18"
+  gem "autotest"
 end
 
 # test-environment gems
@@ -44,5 +45,9 @@ group :test, :spec, :cucumber do
   gem "remarkable",              ">=4.0.0.alpha2"
   gem "remarkable_activemodel",  ">=4.0.0.alpha2"
   gem "remarkable_activerecord", ">=4.0.0.alpha2"
+  gem "webrat"
+  gem "cucumber"
+  gem "database_cleaner"
+  gem "cucumber-rails"
 end
 
