@@ -1,0 +1,3 @@
+To create the file development_structure.sql do:
+
+rake db:structure:dump

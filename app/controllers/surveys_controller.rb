@@ -11,18 +11,20 @@ class SurveysController < ApplicationController
 
   def new
     @survey = Survey.new
+    @packets = Packet.owned_by(current_user)
   end
 
   def edit
-    @survey = Packet.find(params[:id])
+    @survey = Survey.find(params[:id])
+    @packets = Packet.owned_by(current_user)
   end
 
   def create
-    @survey = Survey.new(params[:packet])
+    @survey = Survey.new(params[:survey])
 
     respond_to do |format|
       if @survey.save
-        redirect_to(@packet, :notice => 'Test was succesvol aangemaakt.')
+        redirect_to(@survey, :notice => 'Test was succesvol aangemaakt.')
       else
         render :action => "new"
       end
@@ -34,7 +36,7 @@ class SurveysController < ApplicationController
 
     respond_to do |format|
       if @survey.update_attributes(params[:survey])
-        redirect_to(@packet, :notice => 'Packet was successfully updated.')
+        redirect_to(@survey, :notice => 'Test is gewijzigd.')
       else
         render :action => "edit"
       end
@@ -46,7 +48,7 @@ class SurveysController < ApplicationController
     @survey.destroy
 
     respond_to do |format|
-      format.html { redirect_to(packets_url) }
+      format.html { redirect_to(surveys_url) }
       format.xml  { head :ok }
     end
   end

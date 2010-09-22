@@ -1,0 +1,8 @@
+.fields
+  .field
+    = f.label :original, "Woord"
+    = f.text_field :original
+  .field
+    = f.label :translation, "Vertaling"
+    = f.text_field :translation
+    = remove_child_link "verwijderen", f

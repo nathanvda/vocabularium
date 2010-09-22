@@ -1,0 +1,14 @@
+%h3= "Test #{@survey.name}"
+
+%table
+  %tr
+    %th Woord
+    %th Vertaling
+  - @packet.words.each do |word|
+    %tr
+      %td= word.original
+      %td= word.translation
+
+= link_to t('common.edit'), edit_packet_path(@packet)
+\|
+= link_to t('common.back'), packets_path
