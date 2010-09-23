@@ -8,4 +8,8 @@ nl:
     edit: Wijzig
     destroy: Verwijder
     you_sure: Ben je zeker?
-
+  survey_taken:
+    labels:
+      answer: Je antwoord
+      next: Volgende
+      done: Toon resultaat

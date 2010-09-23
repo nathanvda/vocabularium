@@ -52,4 +52,10 @@ class SurveysController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def take
+    survey = Survey.find(params[:id])
+    test = SurveyTaken.prepare_test(survey)
+    redirect_to survey_takens_path(test)
+  end
 end

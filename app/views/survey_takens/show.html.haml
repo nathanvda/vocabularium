@@ -1,0 +1,11 @@
+%h1 Doe de test
+
+%p= "Vraag #{@survey_taken.current_question}/#{survey_taken.nr_questions}"
+
+  = form_tag '/survey_takens/next', :method => :post do
+    %p Geef de vertaling van het woord
+    %em= @question.word.original
+    = label_tag :answer, t('survey_taken.labels.answer')
+    = text_field_tag :answer
+    = submit_tag t('survey_taken.labels.next')
+

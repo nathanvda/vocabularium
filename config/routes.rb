@@ -1,10 +1,18 @@
 Vocabularium::Application.routes.draw do
 
+  match "survey_takens/:id" => 'survey_takens#show', :as => 'survey_takens'
+
+  post "survey_takens/next"
+
   resources :packets
 
   resources :courses
 
-  resources :surveys
+  resources :surveys do
+    member do
+      get 'take'
+    end
+  end
 
   devise_for :users
 

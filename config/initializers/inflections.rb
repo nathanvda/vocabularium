@@ -9,6 +9,6 @@
 #   inflect.uncountable %w( fish sheep )
 # end
 
-ActiveSupport::Inflector.inflections do |inflect|
-   inflect.irregular 'survey_taken', 'surveys_takens'
-end
+#ActiveSupport::Inflector.inflections do |inflect|
+#   inflect.irregular 'survey_taken', 'survey_takens'
+#end

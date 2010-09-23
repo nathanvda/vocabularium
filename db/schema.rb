@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100921194023) do
+ActiveRecord::Schema.define(:version => 20100923172051) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20100921194023) do
     t.integer "packet_id"
   end
 
+  add_index "survey_packets", ["packet_id"], :name => "survey_packets_packet_id_fk"
   add_index "survey_packets", ["survey_id", "packet_id"], :name => "index_surveys_packets_on_survey_id_and_packet_id"
 
   create_table "survey_questions", :force => true do |t|
@@ -98,5 +99,12 @@ ActiveRecord::Schema.define(:version => 20100921194023) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_foreign_key "survey_packets", "packets", :name => "survey_packets_packet_id_fk"
+  add_foreign_key "survey_packets", "surveys", :name => "survey_packets_survey_id_fk"
+
+  add_foreign_key "survey_questions", "survey_takens", :name => "survey_questions_survey_taken_id_fk"
+
+  add_foreign_key "survey_takens", "surveys", :name => "survey_takens_survey_id_fk"
 
 end

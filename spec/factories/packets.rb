@@ -9,6 +9,9 @@ Factory.define :packet do |f|
 end
 
 Factory.define :packet_with_two_words, :parent => :packet do |f|
-  f.after_create { |packet| packet.words << Factory(:word, :packet_id => packet.id)}
+  f.after_create do |packet|
+    packet.words << Factory(:word, :packet_id => packet.id)
+    packet.words << Factory(:word, :packet_id => packet.id)
+  end
 end
 
