@@ -3,7 +3,7 @@ class SurveyTaken < ActiveRecord::Base
   has_many :survey_questions
 
   def self.prepare_test(survey)
-    new_test = SurveyTaken.new(:current_question => 0, :nr_correct => 0, :score => 0)
+    new_test = SurveyTaken.new(:current_question => 0, :nr_correct => 0, :score => 0, :survey_id => survey.id)
     new_test.add_questions_from(survey)
     new_test.update_attribute(:nr_questions, new_test.survey_questions.size)
     new_test
@@ -16,5 +16,14 @@ class SurveyTaken < ActiveRecord::Base
       q = SurveyQuestion.new(:order => counter, :word_id => word.id)
       survey_questions << q
     end
+  end
+
+  def calculate_result
+    correct=0
+    survey_questions.all.each do |question|
+      correct = correct + 1 if question.is_correct?
+    end
+    update_attribute(:nr_correct, correct)
+    update_attribute(:score, 100.0 * correct/nr_questions)
   end
 end

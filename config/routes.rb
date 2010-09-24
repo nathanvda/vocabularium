@@ -1,8 +1,8 @@
 Vocabularium::Application.routes.draw do
 
-  match "survey_takens/:id" => 'survey_takens#show', :as => 'survey_takens'
+  match "survey_takens/:id" => 'survey_takens#show', :as => 'survey_taken'
 
-  post "survey_takens/next"
+  post "survey_takens/:id/next" => 'survey_takens#next', :as => 'next_survey_question'
 
   resources :packets
 

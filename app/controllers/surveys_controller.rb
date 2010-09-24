@@ -24,7 +24,7 @@ class SurveysController < ApplicationController
 
     respond_to do |format|
       if @survey.save
-        redirect_to(@survey, :notice => 'Test was succesvol aangemaakt.')
+        redirect_to(surveys_path, :notice => 'Test was succesvol aangemaakt.')
       else
         render :action => "new"
       end
@@ -56,6 +56,6 @@ class SurveysController < ApplicationController
   def take
     survey = Survey.find(params[:id])
     test = SurveyTaken.prepare_test(survey)
-    redirect_to survey_takens_path(test)
+    redirect_to survey_taken_path(test)
   end
 end

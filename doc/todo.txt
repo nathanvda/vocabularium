@@ -1,0 +1,15 @@
+
+* add more tests!!!!
+
+* make sure that evaluating whether a question is correct gets smarter
+  - take into account that multiple words could be entered --> convert to array on comma or semi-colon
+
+* in the 'give the answer'-form: make sure that the text-box gets the focus automatically
+
+* in the list of surveys show an overview of the test-results (list of taken tests)
+
+* in the result screen of a survey-taken, show the list of wrong answers (and optionally: right answers)
+
+* style-style-style!!! improve layout!
+
+* ... ?

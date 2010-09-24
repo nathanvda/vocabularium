@@ -4,11 +4,12 @@
   %tr
     %th Woord
     %th Vertaling
-  - @packet.words.each do |word|
-    %tr
-      %td= word.original
-      %td= word.translation
+  - @survey.packets.each do |packet|
+    - packet.words.each do |word|
+      %tr
+        %td= word.original
+        %td= word.translation
 
-= link_to t('common.edit'), edit_packet_path(@packet)
+= link_to t('common.edit'), edit_survey_path(@survey)
 \|
-= link_to t('common.back'), packets_path
+= link_to t('common.back'), surveys_path

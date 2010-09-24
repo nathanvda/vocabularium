@@ -1,2 +1,12 @@
-%h1 SurveyTakens#next
-%p Find me in app/views/survey_takens/next.html.haml
+%h1= "Test-resultaten van test #{@survey_taken.survey.name}"
+%p= "De test is afgelegd op #{@survey_taken.updated_at}"
+
+%table
+  %tr
+    %td Juiste antwoorden
+    %td= "#{@survey_taken.nr_correct} / #{@survey_taken.nr_questions} "
+  %tr
+    %td Score
+    %td= @survey_taken.score
+
+= link_to "Terug", surveys_path
