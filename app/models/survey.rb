@@ -2,6 +2,7 @@ class Survey < ActiveRecord::Base
   has_many :survey_packets
   has_many :packets, :through => :survey_packets
   validate :must_have_packets
+  has_many :survey_takens
   validates_presence_of :name
   validates_uniqueness_of :name
 

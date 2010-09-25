@@ -3,7 +3,7 @@
     #errorExplanation
       %h2= "#{pluralize(@survey.errors.count, "error")} prohibited this packet from being saved:"
       %ul
-        - @packet.errors.full_messages.each do |msg|
+        - @survey.errors.full_messages.each do |msg|
           %li= msg
 
   .field

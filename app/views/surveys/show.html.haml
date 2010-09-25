@@ -1,14 +1,38 @@
-%h3= "Test #{@survey.name}"
+%h3= "Test: #{@survey.name}"
 
 %table
-  %tr
-    %th Woord
-    %th Vertaling
-  - @survey.packets.each do |packet|
-    - packet.words.each do |word|
+  %thead
+    %tr
+      %th Woord
+      %th Vertaling
+  %tbody
+    - @survey.packets.each do |packet|
+      - packet.words.each do |word|
+        %tr
+          %td= word.original
+          %td= word.translation
+
+%h3 Resultaten
+
+-if @survey.survey_takens.size > 0
+  %table
+    %thead
       %tr
-        %td= word.original
-        %td= word.translation
+        %th Test begonnen
+        %th Test beeindigd
+        %th Correct/Totaal # vragen
+        %th Score
+        %th
+    %tbody
+      -@survey.survey_takens.each do |tested|
+        %tr
+          %td= tested.created_at
+          %td= tested.updated_at
+          %td== #{tested.nr_correct} / #{tested.nr_questions}
+          %td= tested.score.nil? ? 'not completed yet' : tested.score
+          %td= link_to (tested.score.nil? ? "Vervolledig test" : "Toon test"), survey_taken_path(tested)
+-else
+  %p Nog niet getest.
 
 = link_to t('common.edit'), edit_survey_path(@survey)
 \|

@@ -17,5 +17,7 @@ $(function() {
     $(this).parents('.fields').hide();
     return false;
   });
+
+  $('.autofocus').focus();
 });
 

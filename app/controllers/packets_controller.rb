@@ -1,12 +1,12 @@
 class PacketsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :find_packet, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @packets = Packet.all
+    @packets = Packet.owned_by(current_user)
   end
 
   def show
-    @packet = Packet.find(params[:id])
   end
 
   def new
@@ -15,11 +15,11 @@ class PacketsController < ApplicationController
   end
 
   def edit
-    @packet = Packet.find(params[:id])
   end
 
   def create
     @packet = Packet.new(params[:packet])
+    @packet.user_id = current_user
 
     if @packet.save
       redirect_to(@packet, :notice => 'Woordenlijst aangemaakt.')
@@ -29,8 +29,6 @@ class PacketsController < ApplicationController
   end
 
   def update
-    @packet = Packet.find(params[:id])
-
     if @packet.update_attributes(params[:packet])
       redirect_to(@packet, :notice => 'Woordenlijst is aangepast.')
     else
@@ -39,9 +37,16 @@ class PacketsController < ApplicationController
   end
 
   def destroy
-    @packet = Packet.find(params[:id])
     @packet.destroy
 
     redirect_to(packets_url)
+  end
+
+
+  private
+
+
+  def find_packet
+    @packet = Packet.owned_by(current_user).find(params[:id])
   end
 end

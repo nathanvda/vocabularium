@@ -4,12 +4,14 @@
   %tr
     %th Naam
     %th Aantal woordenlijsten
+    %th Aantal testen
     %th
 
   - @surveys.each do |survey|
     %tr
       %td= survey.name
       %td= survey.packets.size
+      %td= survey.survey_takens.size
       %td
         = link_to "Doe de Test", take_survey_path(survey)
         = link_to t('common.show'), survey

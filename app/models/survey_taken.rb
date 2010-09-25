@@ -3,7 +3,7 @@ class SurveyTaken < ActiveRecord::Base
   has_many :survey_questions
 
   def self.prepare_test(survey)
-    new_test = SurveyTaken.new(:current_question => 0, :nr_correct => 0, :score => 0, :survey_id => survey.id)
+    new_test = SurveyTaken.new(:current_question => 0, :score => 0, :survey_id => survey.id)
     new_test.add_questions_from(survey)
     new_test.update_attribute(:nr_questions, new_test.survey_questions.size)
     new_test
@@ -15,6 +15,7 @@ class SurveyTaken < ActiveRecord::Base
     all_words.randomize.each do |word|
       q = SurveyQuestion.new(:order => counter, :word_id => word.id)
       survey_questions << q
+      counter = counter + 1
     end
   end
 
