@@ -19,7 +19,7 @@ class PacketsController < ApplicationController
 
   def create
     @packet = Packet.new(params[:packet])
-    @packet.user_id = current_user
+    @packet.user_id = current_user.id
 
     if @packet.save
       redirect_to(@packet, :notice => 'Woordenlijst aangemaakt.')

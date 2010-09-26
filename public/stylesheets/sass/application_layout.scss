@@ -1,0 +1,131 @@
+/*
+    Stylesheet for <VASCO Data Security - SMS Gateway>
+	@author	name Kjel Delaey <kde@vasco.com>
+*/
+
+
+@import "colors";
+@import "mixins";
+
+html, body{
+    background-color: $application_layout_background_color;
+}
+
+body{
+    color: $application_layout_body_text_color;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    line-height: 1.4em;
+}
+
+a, a:link, a:visited{
+    color: $blue_link_color;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus{
+    color: $blue_link_color;
+    text-decoration: underline;
+}
+
+#header{
+    background-color: $header_background_color;
+    background: url("/images/banner_bg-light.png") repeat-x;
+    height: 100px;
+    padding: 1em 1em 0;
+    position: relative;
+
+    a, a:link, a:visited{
+        color: $header_link_color;
+        text-decoration: underline;
+    }
+
+    a:hover, a:active, a:focus{
+        color: $header_link_focus_color;
+    }
+
+    h1 {
+        float:left;
+        text-align:right; background: url("/images/vocabularium-header-2.png") no-repeat;
+        height: 98px; width:590px;
+        margin-left:15px;
+        .hideText {
+            display:none;
+        }
+
+        a{
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    #user_nav{
+        @include border_bottom_left_radius(5px);
+        @include border_bottom_right_radius(5px);
+        background-color: $user_navigation_background_color;
+        color: $user_navigation_text_color;
+        padding: 0.5em 0.75em;
+        position: absolute;
+        top: 0;
+        right: 1em;
+    }
+
+    ul#nav{
+        position: absolute;
+        bottom: 0;
+        right: 1em;
+
+        li{
+            display: inline;
+
+            a{
+                @include border_top_left_radius(5px);
+                @include border_top_right_radius(5px);
+                background-color: $navigation_tab_background_color;
+                float: left;
+                margin: 0 1px;
+                padding: 0.5em 0.75em;
+                text-decoration: none;
+            }
+
+            a:hover{
+                background-color: $navigation_tab_focus_background_color;
+            }
+
+            &.current a{
+                background-color: $navigation_current_tab_background_color;
+                color: $loud_text_color;
+            }
+        }
+    }
+}
+
+#main{
+    @include border_radius(10px);
+    background-color: $application_layout_main_background_color;
+    margin: 1em;
+    padding: 1em;
+}
+
+body.user_sessions #main{
+    background-color: $application_layout_background_color;
+}
+
+#footer{
+    color: $quiet_text_color;
+    font-size: 85%;
+    padding: 10px 0 10px;
+    position: relative;
+    text-align: center;
+
+    img#company_logo_footer{
+        position: absolute;
+        top: 5px;
+        left: 15px;
+    }
+
+}
+
+body.user_sessions img#company_logo_footer{
+    display: none;
+}

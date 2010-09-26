@@ -1,0 +1,71 @@
+@import "colors";
+
+.datatable-defaults{
+    caption{
+        display: none;
+    }
+
+    th, td{
+        padding: 0.5em;
+    }
+}
+
+.datatable-with-row-hover{
+    @extend .datatable-defaults;
+    thead th{
+        background-color: $datatable_header_background_color;
+        color: $loud_text_color;
+        font-weight: bold;
+    }
+
+    tbody td{
+        border-bottom: 1px solid $datatable_body_border_color;
+    }
+
+    tbody tr:hover > *{
+        background-color: $datatable_body_focus_background_color;
+    }
+}
+
+.datatable-details{
+    @extend .datatable-defaults;
+    tbody{
+        td:first-child{
+            background-color: $datatable_details_header_background_color;
+            border-right: 3px solid $datatable_details_body_border_color;
+        }
+
+        td{
+            border-top: 1px solid $datatable_details_body_border_color;
+            border-bottom: 1px solid $datatable_details_body_border_color;
+        }
+    }
+}
+
+table{
+    @extend .datatable-defaults;
+
+    h1 + &{
+        margin-top: 10px;
+    }
+}
+
+.grid table, table.grid{
+    @extend .datatable-with-row-hover;
+    width: 100%;
+}
+
+table.compact{
+    @extend .datatable-details;
+}
+
+#envelope_detail > table{
+    th, td{
+        color: $loud_text_color;
+        padding: 0.25em 0.5em 0.25em 0.25em;
+    }
+
+    thead th{
+        color: $metadata_text_color;
+    }
+}

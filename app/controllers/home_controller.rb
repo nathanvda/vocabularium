@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def manual
   end
 
+  def current_tab
+    :root
+  end
+
 end

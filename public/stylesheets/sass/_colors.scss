@@ -1,0 +1,75 @@
+// application layout
+$application_layout_background_color: #D8D9DA;
+$application_layout_main_background_color: white;
+$header_background_color: #333333;
+
+// user navigation
+$user_navigation_background_color: #262626;
+$user_navigation_text_color: white;
+
+// navigation
+$navigation_tab_background_color: #3D3B3B;
+$navigation_tab_focus_background_color: #262626;
+$navigation_current_tab_background_color: $application_layout_background_color;
+
+// login
+$login_container_background_color: white;
+$login_field_background_color: #FAFAFA;
+$login_field_border_color: #DDD;
+
+// forms
+$button_light_background_color: #F0F0F0;
+$button_dark_background_color: #CFCFCF;
+$button_border_top_color: #CCC;
+$button_border_right_color: #999;
+$button_border_bottom_color: $button_border_right_color;
+$button_border_left_color: $button_border_top_color;
+
+$input_field_border_top_color: #999;
+$input_field_border_right_color: #EEE;
+$input_field_border_bottom_color: #DDD;
+$input_field_border_left_color: #CCC;
+$input_field_error_background_color: #FFE3E3;
+
+
+// text
+$application_layout_body_text_color: #222;
+$quiet_text_color: #666;
+$loud_text_color: #000;
+$metadata_text_color: #F15E24;
+$in_place_edit_border_color: #71724C;
+
+// headings
+$heading3_border_color: #666;
+
+// messages
+$error_box_background_color: #FFE3E3;
+$error_box_border_color: #DD0000;
+
+$warning_box_background_color: #FFF6BF;
+$warning_box_border_color: #FFD324;
+
+$notice_box_background_color: #E6EFC2;
+$notice_box_border_color: #C6D880;
+
+// links
+$link_color: #5DDAFF;
+$link_focus_color: #3399CC;
+
+$blue_link_color: #005596;
+
+$header_link_color: white;
+$header_link_focus_color: #3399CC;
+
+// tables
+$datatable_header_background_color: #D9EBF9;
+$datatable_body_border_color: #DDDDDD;
+$datatable_body_focus_background_color: #F2F6FF;
+$datatable_details_header_background_color: #F0F0F0;
+$datatable_details_body_border_color: #D0D0D0;
+
+// filters
+$filter_background_color: #EFEFEF;
+$filter_border_top_color: #D9D9D9;
+$filter_border_left_color: #CCCCCC;
+$filter_body_border_color: white;

@@ -5,7 +5,7 @@
     %meta{'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
     %link{ :href => "/favicon.ico", :rel => "shortcut icon" }
 
-    = stylesheet_link_tag :all
+    =  stylesheet_link_tag  all_base_css, :cache => 'all_1'
 
     = javascript_include_tag :defaults
     = javascript_include_tag 'packets.js'
@@ -17,7 +17,7 @@
 
     = yield :head
   %body
-    #banner
+    #header
       .the-title
         %h1
           %span.hideText Your application
@@ -25,16 +25,17 @@
         = render 'devise/menu/registration_items'
         |
         = render 'devise/menu/login_items'
-      #navigation
-        .nav_link=link_to "Home", root_path
-        .nav_link=link_to "Woordenlijsten", packets_path
-        .nav_link=link_to "Overhoren", surveys_path
-    #container
-      #sidebar
-      #contents
-        - flash.each do |name, msg|
-          %div{:class => [name," message"], :id => "flash_#{name}"}
-            = msg
-        =yield
+      %ul#nav
+        = navigation_tab(:root)
+        = navigation_tab(:packets)
+        = navigation_tab(:surveys)
+        =#.nav_link=link_to "Home", root_path
+        =#.nav_link=link_to "Woordenlijsten", packets_path
+        =#.nav_link=link_to "Overhoren", surveys_path
+    #main
+      - flash.each do |name, msg|
+        %div{:class => [name," message"], :id => "flash_#{name}"}
+          = msg
+      =yield
     #footer
-      == &copy; 2010 DIXIS bvba | #{APP_VERSION} | <a href='http://p.yusukekamiyamane.com/'>Icons</a>
+      == &copy; 2010 DIXIS bvba | #{app_version} | <a href='http://p.yusukekamiyamane.com/'>Icons</a>

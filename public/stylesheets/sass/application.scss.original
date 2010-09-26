@@ -1,0 +1,255 @@
+
+/** insert some css-reset here!!!! **/
+ * { padding:0px; margin:0px;}
+
+$area_divider_color:         #f0f0f0;
+$table_header_divider_color: #cacaca;
+$table_odd_row_color:        #efefef;
+$bordrd_light_color:         #ddd;
+$sidebar_width:              50px;
+
+$background_color_error:     #F0A8A8;
+
+/** styling **/
+body {
+    font-family: "Lucida Console", Monaco, "DejaVu Sans Mono", monospace;
+    font-size:12px;
+    background-color: #e7e7e7;
+}
+
+.disabled {color: #777; }
+
+/* styling of the zones */
+
+#banner {
+    background: url("/images/banner_bg-light.png") repeat-x;
+    border-bottom: 1px solid $area_divider_color;
+    color: #555555;
+    padding-right:20px;
+    padding-top:5px;
+    margin-top:0px;
+    height:100px;
+
+    img {
+        float:right;
+    }
+
+    h1 {
+        float:left;
+        text-align:right; background: url("/images/vocabularium-header-2.png") no-repeat; height: 98px; width:590px;
+        margin-left:15px;
+        .hideText {
+            display:none;
+        }
+    }
+
+    #user_nav {
+        margin-top:20px;
+        clear:right;
+        float:right;
+    }
+
+    #navigation {
+        margin-top:45px;
+        clear:right;
+        /*border:2px solid red;*/
+        float:right;
+        .nav_link {
+            float:left;
+            margin-right:2px;
+            background: #fff;
+            width:140px;
+            height:16px;
+            padding:2px;
+            text-align:center;
+            a {
+                padding:2px;
+                padding-left:5px;
+            }
+        }
+    }
+}
+
+
+img {border:none;}
+
+
+#sidebar {
+    font-size:11px;
+    float:left;
+    /*padding-left:2em;*/
+    padding-bottom:1em;
+    /*margin-left:2px;*/
+    /*border-right: 2px solid $area_divider_color;*/
+    width: $sidebar_width;
+    color:#333;
+    min-height:2px;
+    z-index:90;
+}
+
+
+#container {
+    background-color: #e7e7e7;
+    width: 100%;
+    float: right;
+    margin-left: -$sidebar_width;
+}
+
+#contents {
+    /*float:left;*/
+    margin-left: $sidebar_width;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    min-height:50px;
+    /*border:4px solid $area_divider_color*/
+}
+
+.clearing {
+  height: 0;
+  clear: both;
+}
+
+.small-link { font-size: 11px;margin-top:10px;}
+
+#footer {
+    width:100%;
+    border-top: 1px solid $area_divider_color;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left: 10px;
+    /*height:12px;*/
+    clear:both;
+    font-size:11px;
+    color: #aaa;
+}
+
+/** table styling **/
+
+/* table style */
+table { font-family: Arial, Liberation Sans, sans-serif;;
+        font-size:12px;
+        border:1px dashed $bordrd_light_color;
+        padding:5px;
+        margin-top:5px;
+        width:100%;
+        border-collapse: collapse;
+}
+thead {padding:10px;border-bottom: 2px solid $table_header_divider_color;}
+th {text-align:left;padding:5px; padding-left:10px; }
+h2 {margin-top:20px;}
+h3 {margin-top:10px;}
+.wide      { width:200px;}
+.narrow    { width:120px;}
+.lessnarrow { width:150px;}
+tr { padding:4px;}
+tr.even {background-color:$table_odd_row_color;}
+tr.odd {background-color:#fff;}
+td {
+    margin:10px;padding:2px;padding-left:10px;
+}
+
+table.compact {
+    table-layout: fixed;
+    font-size:11px;
+}
+
+
+.bordrd {
+    border: 1px solid $bordrd_light_color;
+    padding: 2px;
+    margin-top:5px;
+}
+
+/** form styling **/
+
+/* attempt to do basic form styling */
+
+fieldset { border:0;}
+
+form {
+    margin-top:5px;
+    margin-bottom:5px;
+
+    fieldset { border: 1px dashed #ddd; }
+    
+    div {
+        clear:both;
+        display: block;
+        margin: 5px 5px 0 0;
+        padding: 1px 3px;
+        width:100%;
+        /*border: 2px solid black;*/
+
+        .field_with_errors {
+            margin: 0px;
+            background-color: $background_color_error;
+            padding:0px;
+        }
+    }
+
+    .fields_wrapper {
+        margin: 0px;
+    }
+
+
+
+
+
+    label {
+        display: block;
+        float: left;
+        width: 160px;
+        padding: 3px 5px;
+        margin: 0 0 2px 0;
+        text-align: left;
+        .optional {
+            font-weight: normal;
+        }
+        .required {
+            font-weight: bold;
+        }
+        .labelCheckbox {
+            float: none;
+            display: block;
+            height:auto;
+            width: auto;
+            padding: 0;
+            text-align: left;
+        }
+        input, select, textarea {
+            width:400px;
+        }
+        .tiny {
+            width:60px;
+        }
+        .auto {
+            width:auto;
+        }
+    }
+}
+
+input[type="submit"]   { width:auto; margin-top:5px; }
+input[type="radio"]    { width:auto; }
+input[type="checkbox"] { width:auto; }
+
+
+/** flash styling **/
+
+.notice { border: 1px solid #26722D; background: #A4E7A0 url(../../images/Checked_Shield_Green.png) 1em 50% no-repeat;}
+.error, .errorExplanation { border: 1px solid #900; background: $background_color_error url(../../images/Close_Shield_Red.png) 1em 50% no-repeat; }
+.warning { border: 1px solid #FEF504; background: #FFF476 url(../../images/Warning_Shield_Yellow.png) 1em 50% no-repeat; }
+.info { border: 1px solid #0049fe; background: #c0dbef url(../../images/Info_Shield_Blue.png) 1em 50% no-repeat; }
+.message, .errorExplanation { width: 90%; margin: 0 auto 10px auto; padding: 10px; padding-left:50px; }
+.message p, .errorExplanation p { margin-left: 20px; padding: 0; font-size: .75em; color: #000; }
+.message a, .errorExplanation a { text-decoration: none; padding: 0 3px; }
+.info a { border-bottom: 1px solid #0049fe; color: #0049fe; }
+.notice a { border: 1px solid #26722D; color: #26722D; }
+.error a, .errorExplanation a { border: 1px solid #900; color: #900; }
+.message a:hover { color: #333; border: 1px solid #333; }
+
+/** in place editing **/
+.in_place_editing, .in_place_editing_ta {
+    display:block; width: 98%;
+}

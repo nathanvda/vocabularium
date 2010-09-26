@@ -1,4 +1,4 @@
 - if user_signed_in?
-  = link_to('Beheer je account', edit_user_registration_path)
+  == Welkom #{link_to(current_user.show_name, edit_user_registration_path)}
 - else
   = link_to('Registreren', new_user_registration_path)

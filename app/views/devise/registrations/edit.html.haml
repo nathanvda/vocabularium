@@ -14,10 +14,10 @@
     = f.password_field :password_confirmation
   .field
     = f.label :name, t('devise.form.nickname')
-    = f.password_field :name
+    = f.text_field :name
   .field
     = f.label :fullname, t('devise.form.fullname')
-    = f.password_field :fullname
+    = f.text_field :fullname
   .field
     = f.label :current_password, "Huidig paswoord"
     = f.password_field :current_password

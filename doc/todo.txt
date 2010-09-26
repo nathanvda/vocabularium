@@ -1,15 +1,43 @@
+-------------------------
+To Do
+-------------------------
 
 * add more tests!!!!
 
 * make sure that evaluating whether a question is correct gets smarter
   - take into account that multiple words could be entered --> convert to array on comma or semi-colon
 
-* in the 'give the answer'-form: make sure that the text-box gets the focus automatically
-
 * in the list of surveys show an overview of the test-results (list of taken tests)
-
-* in the result screen of a survey-taken, show the list of wrong answers (and optionally: right answers)
 
 * style-style-style!!! improve layout!
 
-* ... ?
+* localise all texts + supply english translations
+
+* make language an option (use http-accepts header?)
+
+* show name of logged-on user
+
+* logged-on user should be able to "visibly" edit her fullname and nick
+
+* toon alleen je eigen tests in de lijst van testen
+
+* informatie
+  - leg uit dat je eerst een test moet aanmaken voor je kan testen
+  - leg uit dat je met tab naar het volgende veld kan gaan
+
+* home-> test jezelf linkt fout door
+
+* voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
+
+*
+
+
+
+
+-------------------------
+Done
+-------------------------
+
+X in the 'give the answer'-form: make sure that the text-box gets the focus automatically
+
+X in the result screen of a survey-taken, show the list of wrong answers (and optionally: right answers)

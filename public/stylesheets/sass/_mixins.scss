@@ -1,0 +1,81 @@
+@import "colors";
+
+@mixin border_radius($rounding){
+    border-radius: $rounding;
+    -moz-border-radius: $rounding;
+    -webkit-border-radius: $rounding;
+    -khtml-border-radius: $rounding;
+}
+
+@mixin border_bottom_left_radius($rounding){
+    border-bottom-left-radius: $rounding;
+    -moz-border-radius-bottomleft: $rounding;
+    -webkit-border-bottom-left-radius: $rounding;
+    -khtml-border-bottom-left-radius: $rounding;
+}
+
+@mixin border_bottom_right_radius($rounding){
+    border-bottom-right-radius: $rounding;
+    -moz-border-radius-bottomright: $rounding;
+    -webkit-border-bottom-right-radius: $rounding;
+    -khtml-border-bottom-right-radius: $rounding;
+}
+
+@mixin border_top_left_radius($rounding){
+    border-top-left-radius: $rounding;
+    -moz-border-radius-topleft: $rounding;
+    -webkit-border-top-left-radius: $rounding;
+    -khtml-border-top-left-radius: $rounding;
+}
+
+@mixin border_top_right_radius($rounding){
+    border-top-right-radius: $rounding;
+    -moz-border-radius-topright: $rounding;
+    -webkit-border-top-right-radius: $rounding;
+    -khtml-border-top-right-radius: $rounding;
+}
+
+
+@mixin button($top_color, $right_color, $bottom_color, $left_color){
+    border-color: $top_color $right_color $bottom_color $left_color;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+/*@mixin button_background_gradient($top_color, $bottom_color){*/
+    /*background-color: $button_dark_background_color; // fallback*/
+    /*background: -moz-linear-gradient(center top, $top_color, $bottom_color) repeat scroll 0 0 transparent;*/
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_color), to($bottom_color)) repeat scroll 0 0 transparent;*/
+
+    /*&:hover{*/
+        /*background-color: $button_light_background_color;*/
+        /*background: -moz-linear-gradient(-90deg, $top_color+10, $bottom_color+10) repeat scroll 0 0 transparent;*/
+        /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_color+10), to($bottom_color+10)) repeat scroll 0 0 transparent;*/
+    /*}*/
+/*}*/
+
+@mixin button_background_gradient($top_color, $bottom_color){
+    background-color: $button_dark_background_color; // fallback
+    background: -moz-linear-gradient(center top, $top_color, $bottom_color) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_color), to($bottom_color)) repeat scroll 0 0 transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F0F0F0F0, endColorstr=#CFCFCFCF);
+
+
+    &:hover{
+        background-color: $button_light_background_color;
+        background: -moz-linear-gradient(-90deg, $top_color+10, $bottom_color+10) repeat scroll 0 0 transparent;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_color+10), to($bottom_color+10)) repeat scroll 0 0 transparent;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F0F0F0F0+10, endColorstr=#CFCFCFCF+10);
+    }
+}
+
+@mixin input_field($top_color, $right_color, $bottom_color, $left_color){
+    input[type="text"], input[type="password"]{
+        border-color: $top_color $right_color $bottom_color $left_color;
+        border-style: solid;
+        border-width: 1px;
+        padding: 3px 5px;
+    }
+}
