@@ -17,3 +17,20 @@ nl:
       answer: Je antwoord
       next: Volgende
       done: Toon resultaat
+  home:
+    index:
+      short_description: Op deze website kan je zelf woordenlijsten samenstellen en je testen.
+      operation: Werkwijze
+      description_step1:
+        Maak een woordenlijst aan, met daarin woorden en hun vertaling.
+        Het aantal woorden is onbeperkt.
+        Je kan meerdere woordenlijsten aanmaken.
+      description_step2:
+        Maak een test. Een test bevat een aantal woordenlijsten,
+        die je zelf kan selecteren.
+      description_step3:
+        Neem de test. Alle woorden worden in een willekeurige volgorde overlopen, waarbij jij telkens
+        de (goede) vertaling moet geven. De computer zal je score bijhouden.
+      next_action: Kies wat je wil doen
+      add_packet: Voeg een nieuwe woordenlijst toe
+      do_test: Test jezelf

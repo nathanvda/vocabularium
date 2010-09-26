@@ -118,3 +118,12 @@ body.user_sessions #main {
 
 body.user_sessions img#company_logo_footer {
   display: none; }
+
+ol {
+  font-family: Palatino, Georgia, "Times New Roman", serif;
+  font-size: 182%;
+  margin: 0 0 10px 0;
+  color: #f28933;
+  list-style-type: decimal; }
+  ol p {
+    color: #666666; }

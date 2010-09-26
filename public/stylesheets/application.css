@@ -1,6 +1,5 @@
 /*
-    Stylesheet for <VASCO Data Security - SMS Gateway>
-	@author	name Kjel Delaey <kde@vasco.com>
+    Stylesheet for <Vocabularium>
 */
 /*@mixin button_background_gradient($top_color, $bottom_color){*/
 /*background-color: $button_dark_background_color; // fallback*/
@@ -102,9 +101,6 @@ h3 {
   .filter input[type="submit"] {
     padding: 0.25em 0.5em; }
 
-span.in_place_editing_ta, span.in_place_editing {
-  border-bottom: 1px dotted #71724c; }
-
 #login {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -165,60 +161,27 @@ h1 + form {
   .field_with_errors > input {
     background-color: #ffe3e3; }
 
-form.edit_user input[type="text"], form.edit_user input[type="password"] {
+form input[type="text"], form input[type="password"] {
   border-color: #999999 #eeeeee #dddddd #cccccc;
   border-style: solid;
   border-width: 1px;
   padding: 3px 5px; }
-form.edit_user div {
+form div {
   margin: 0 0 10px 0; }
-  form.edit_user div#redefine_password, form.edit_user div#select_courier {
-    display: none; }
-form.edit_user label {
+form label {
+  clear: left;
   display: block;
   float: left;
-  width: 120px; }
-form.edit_user input[type="checkbox"], form.edit_user input[type="submit"], form.edit_user #redefine_password > span {
-  margin-left: 120px; }
-form.edit_user input + label {
+  width: 170px; }
+form input[type="checkbox"], form input[type="submit"] {
+  margin-left: 170px; }
+form input + label {
   display: inline;
   float: none; }
 
-form.new_user input[type="text"], form.new_user input[type="password"] {
-  border-color: #999999 #eeeeee #dddddd #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  padding: 3px 5px; }
-form.new_user div {
-  margin: 0 0 10px 0; }
-form.new_user label {
-  display: block;
-  float: left;
-  width: 120px; }
-form.new_user input[type="checkbox"], form.new_user input[type="submit"] {
-  margin-left: 120px; }
-form.new_user input + label {
-  display: inline;
-  float: none; }
-
-form.new_envelope input[type="text"], form.new_envelope input[type="password"] {
-  border-color: #999999 #eeeeee #dddddd #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  padding: 3px 5px; }
-form.new_envelope p {
-  margin: 0 0 10px 0; }
-  form.new_envelope p#select_courier {
-    display: none; }
-form.new_envelope label {
-  display: block;
-  float: left;
-  width: 95px; }
-form.new_envelope input[type="checkbox"], form.new_envelope input[type="submit"] {
-  margin-left: 95px; }
-form.new_envelope input + label {
-  display: inline;
-  float: none; }
+.fields {
+  border: 1px dashed #cccccc;
+  padding: 10px 5px 0px 10px; }
 
 input[type="submit"] {
   border-radius: 5px;

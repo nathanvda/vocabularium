@@ -1,13 +1,16 @@
 %h1 Vocabularium
-%p Hier kan je zelf je woordenlijsten samenstellen en overhoren.
+%p= t 'home.index.short_description'
 
-%h3 Werkwijze
+%h3= t 'home.index.operation'
 %p
-  Eerst voeg je een woordenlijst toe, met daarin woorden en hun vertaling. Je mag zoveel woorden als je wil toevoegen.
-  Je mag ook meerdere woordenlijsten toevoegen, zoveel als je wil.
-  Daarna kan je een test maken, door een aantal lijsten te selecteren, en uit die lijsten wordt je dan overhoord, naar keuze
-  over alle woorden of een selectie ervan.
+  %ol.big_numbers
+    %li
+      %p= t 'home.index.description_step1'
+    %li
+      %p= t 'home.index.description_step2'
+    %li
+      %p= t 'home.index.description_step3'
 
-%h3 Kies wat je wil doen
-%p= link_to "Voeg een nieuwe woordenlijst toe", new_packet_path
-%p= link_to "Test jezelf", new_packet_path
+%h3= t 'home.index.next_action'
+%p= link_to t('home.index.add_packet'), new_packet_path
+%p= link_to t('home.index.do_test'), new_survey_path

@@ -1,6 +1,5 @@
 /*
-    Stylesheet for <VASCO Data Security - SMS Gateway>
-	@author	name Kjel Delaey <kde@vasco.com>
+    Stylesheet for <Vocabularium>
 */
 
 @import "colors";
@@ -89,9 +88,6 @@ h3{
     }
 }
 
-span.in_place_editing_ta, span.in_place_editing{
-    border-bottom: 1px dotted $in_place_edit_border_color;
-}
 
 #login{
     @include border_radius(10px);
@@ -157,25 +153,24 @@ h1 + form{
     }
 }
 
-form.edit_user{
+
+
+form{
     @include local_input_field;
 
     div{
         margin: 0 0 10px 0;
-
-        &#redefine_password, &#select_courier{
-            display: none;
-        }
     }
 
     label{
+        clear:left;
         display: block;
         float: left;
-        width: 120px;
+        width: 170px;
     }
 
-    input[type="checkbox"], input[type="submit"], #redefine_password > span{
-        margin-left: 120px;
+    input[type="checkbox"], input[type="submit"] {
+        margin-left: 170px;
     }
 
     input + label{
@@ -184,54 +179,9 @@ form.edit_user{
     }
 }
 
-form.new_user{
-    @include local_input_field;
-
-    div{
-        margin: 0 0 10px 0;
-    }
-
-    label{
-        display: block;
-        float: left;
-        width: 120px;
-    }
-
-    input[type="checkbox"], input[type="submit"]{
-        margin-left: 120px;
-    }
-
-    input + label{
-        display: inline;
-        float: none;
-    }
-}
-
-form.new_envelope{
-    @include local_input_field;
-
-    p{
-        margin: 0 0 10px 0;
-
-        &#select_courier{
-            display: none;
-        }
-    }
-
-    label{
-        display: block;
-        float: left;
-        width: 95px;
-    }
-
-    input[type="checkbox"], input[type="submit"]{
-        margin-left: 95px;
-    }
-
-    input + label{
-        display: inline;
-        float: none;
-    }
+.fields {
+    border:1px dashed $grouping_box_border_color;
+    padding: 10px 5px 0px 10px;
 }
 
 input[type="submit"]{
