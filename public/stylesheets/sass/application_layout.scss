@@ -18,18 +18,18 @@ body{
 }
 
 a, a:link, a:visited{
-    color: $blue_link_color;
+    color: $link_color;
     text-decoration: none;
 }
 
 a:hover, a:active, a:focus{
-    color: $blue_link_color;
+    color: $link_focus_color;
     text-decoration: underline;
 }
 
 #header{
     background-color: $header_background_color;
-    background: url("/images/banner_bg-light.png") repeat-x;
+    /*background: url("/images/banner_bg-light.png") repeat-x;*/
     height: 100px;
     padding: 1em 1em 0;
     position: relative;
@@ -112,7 +112,7 @@ body.user_sessions #main{
 }
 
 #footer{
-    color: $quiet_text_color;
+    color: $complementary_color_lighter;
     font-size: 85%;
     padding: 10px 0 10px;
     position: relative;
@@ -132,12 +132,37 @@ body.user_sessions img#company_logo_footer{
 
 ol {
     font-family: Palatino, Georgia, "Times New Roman", serif;
-    font-size: 182%;
+    font-size: 400%;
     margin: 0 0 10px 0;
-    color: $jump_out_text_color;
+    color: $complementary_color_vivid;
     list-style-type: decimal;
+    counter-reset: item;
+    height:200px;
+
+    li:before {
+        clear:left;
+        content: counter(item) "."; counter-increment: item;
+        margin-top:10px;
+        margin-left:10px;
+        display:block;
+        float:left;
+        width:40px;
+        height:40px;
+    }
+
+    li {
+        @include border_radius(10px);
+        /*display:block;*/
+        background-color: $complementary_color_lighter;
+    }
 
     p {
-        color:$quiet_text_color;
+        margin-top: 20px;
+        padding-top:5px;
+        margin-left: 60px;
+        color:$primary_color_dark;
+        font-size:13px;
+        width:500px;
+        height:50px;
     }
 }

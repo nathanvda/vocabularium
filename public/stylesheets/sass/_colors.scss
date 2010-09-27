@@ -1,15 +1,37 @@
+
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+
+$primary_color_pastel: #A98388;
+$primary_color_dark: #806A6D;
+$primary_color_vivid: #6F2D34;
+$primary_color_light: #F0D0D4;
+$primary_color_lighter: #F0E2E3;
+
+$complementary_color_pastel: #7A9473;
+$complementary_color_dark: #61705D;
+$complementary_color_vivid: #336227;
+$complementary_color_light: #D3ECCD;
+$complementary_color_lighter: #E1ECDE;
+
 // application layout
-$application_layout_background_color: #D8D9DA;
+/*$application_layout_background_color: #D8D9DA;*/
+$application_layout_background_color: $primary_color_dark;
 $application_layout_main_background_color: white;
-$header_background_color: #333333;
+$header_background_color: $primary_color_pastel;
+
+
+
+
+
 
 // user navigation
-$user_navigation_background_color: #262626;
+$user_navigation_background_color: $primary_color_vivid;
 $user_navigation_text_color: white;
 
 // navigation
-$navigation_tab_background_color: #3D3B3B;
-$navigation_tab_focus_background_color: #262626;
+$navigation_tab_background_color: $primary_color_vivid;
+$navigation_tab_focus_background_color: $primary_color_dark;
 $navigation_current_tab_background_color: $application_layout_background_color;
 
 // login
@@ -55,13 +77,11 @@ $notice_box_background_color: #E6EFC2;
 $notice_box_border_color: #C6D880;
 
 // links
-$link_color: #5DDAFF;
-$link_focus_color: #3399CC;
-
-$blue_link_color: #005596;
+$link_color: orange;
+$link_focus_color: $primary_color_vivid;
 
 $header_link_color: white;
-$header_link_focus_color: #3399CC;
+$header_link_focus_color: orange;
 
 // tables
 $datatable_header_background_color: #D9EBF9;

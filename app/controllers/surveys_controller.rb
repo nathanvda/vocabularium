@@ -3,7 +3,7 @@ class SurveysController < ApplicationController
   before_filter :find_survey, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @surveys = Survey.all
+    @surveys = Survey.owned_by(current_user)
   end
 
   def show
@@ -20,6 +20,7 @@ class SurveysController < ApplicationController
 
   def create
     @survey = Survey.new(params[:survey])
+    @survey.user_id = current_user.id
 
     if @survey.save
       redirect_to(surveys_path, :notice => 'Test was succesvol aangemaakt.')

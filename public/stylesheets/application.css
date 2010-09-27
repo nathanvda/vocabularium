@@ -1,6 +1,12 @@
 /*
     Stylesheet for <Vocabularium>
 */
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+/*$application_layout_background_color: #D8D9DA;*/
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+/*$application_layout_background_color: #D8D9DA;*/
 /*@mixin button_background_gradient($top_color, $bottom_color){*/
 /*background-color: $button_dark_background_color; // fallback*/
 /*background: -moz-linear-gradient(center top, $top_color, $bottom_color) repeat scroll 0 0 transparent;*/
@@ -11,6 +17,9 @@
 /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top_color+10), to($bottom_color+10)) repeat scroll 0 0 transparent;*/
 /*}*/
 /*}*/
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+/*$application_layout_background_color: #D8D9DA;*/
 .datatable-defaults caption, .datatable-with-row-hover caption, .grid table caption, table.grid caption, .datatable-details caption, table.compact caption, table caption {
   display: none; }
 .datatable-defaults th, .datatable-with-row-hover th, .grid table th, table.grid th, .datatable-details th, table.compact th, table th, .datatable-defaults td, .datatable-with-row-hover td, .grid table td, table.grid td, .datatable-details td, table.compact td, table td {

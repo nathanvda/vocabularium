@@ -2,6 +2,12 @@
     Stylesheet for <VASCO Data Security - SMS Gateway>
 	@author	name Kjel Delaey <kde@vasco.com>
 */
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+/*$application_layout_background_color: #D8D9DA;*/
+/* color-scheme from http://colorschemedesigner.com : http://colorschemedesigner.com/#5z22P77m6v5P.
+ */
+/*$application_layout_background_color: #D8D9DA;*/
 /*@mixin button_background_gradient($top_color, $bottom_color){*/
 /*background-color: $button_dark_background_color; // fallback*/
 /*background: -moz-linear-gradient(center top, $top_color, $bottom_color) repeat scroll 0 0 transparent;*/
@@ -13,7 +19,7 @@
 /*}*/
 /*}*/
 html, body {
-  background-color: #d8d9da; }
+  background-color: #806a6d; }
 
 body {
   color: #222222;
@@ -21,16 +27,16 @@ body {
   line-height: 1.4em; }
 
 a, a:link, a:visited {
-  color: #005596;
+  color: orange;
   text-decoration: none; }
 
 a:hover, a:active, a:focus {
-  color: #005596;
+  color: #6f2d34;
   text-decoration: underline; }
 
 #header {
-  background-color: #333333;
-  background: url("/images/banner_bg-light.png") repeat-x;
+  background-color: #a98388;
+  /*background: url("/images/banner_bg-light.png") repeat-x;*/
   height: 100px;
   padding: 1em 1em 0;
   position: relative; }
@@ -38,7 +44,7 @@ a:hover, a:active, a:focus {
     color: white;
     text-decoration: underline; }
   #header a:hover, #header a:active, #header a:focus {
-    color: #3399cc; }
+    color: orange; }
   #header h1 {
     float: left;
     text-align: right;
@@ -61,7 +67,7 @@ a:hover, a:active, a:focus {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-right-radius: 5px;
     -khtml-border-bottom-right-radius: 5px;
-    background-color: #262626;
+    background-color: #6f2d34;
     color: white;
     padding: 0.5em 0.75em;
     position: absolute;
@@ -82,15 +88,15 @@ a:hover, a:active, a:focus {
         -moz-border-radius-topright: 5px;
         -webkit-border-top-right-radius: 5px;
         -khtml-border-top-right-radius: 5px;
-        background-color: #3d3b3b;
+        background-color: #6f2d34;
         float: left;
         margin: 0 1px;
         padding: 0.5em 0.75em;
         text-decoration: none; }
       #header ul#nav li a:hover {
-        background-color: #262626; }
+        background-color: #806a6d; }
       #header ul#nav li.current a {
-        background-color: #d8d9da;
+        background-color: #806a6d;
         color: black; }
 
 #main {
@@ -103,10 +109,10 @@ a:hover, a:active, a:focus {
   padding: 1em; }
 
 body.user_sessions #main {
-  background-color: #d8d9da; }
+  background-color: #806a6d; }
 
 #footer {
-  color: #666666;
+  color: #e1ecde;
   font-size: 85%;
   padding: 10px 0 10px;
   position: relative;
@@ -121,9 +127,34 @@ body.user_sessions img#company_logo_footer {
 
 ol {
   font-family: Palatino, Georgia, "Times New Roman", serif;
-  font-size: 182%;
+  font-size: 400%;
   margin: 0 0 10px 0;
-  color: #f28933;
-  list-style-type: decimal; }
+  color: #336227;
+  list-style-type: decimal;
+  counter-reset: item;
+  height: 200px; }
+  ol li:before {
+    clear: left;
+    content: counter(item) ".";
+    counter-increment: item;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px; }
+  ol li {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    /*display:block;*/
+    background-color: #e1ecde; }
   ol p {
-    color: #666666; }
+    margin-top: 20px;
+    padding-top: 5px;
+    margin-left: 60px;
+    color: #806a6d;
+    font-size: 13px;
+    width: 500px;
+    height: 50px; }
