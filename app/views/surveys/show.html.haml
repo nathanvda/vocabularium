@@ -20,16 +20,16 @@
       %tr
         %th Test begonnen
         %th Test beeindigd
-        %th Correct/Totaal # vragen
+        %th Correct/Totaal
         %th Score
         %th
     %tbody
       -@survey.survey_takens.each do |tested|
         %tr
-          %td= tested.created_at
-          %td= tested.updated_at
+          %td= l tested.created_at
+          %td= l tested.updated_at
           %td== #{tested.nr_correct} / #{tested.nr_questions}
-          %td= tested.score.nil? ? 'not completed yet' : tested.score
+          %td= tested.score.nil? ? 'not completed yet' : '%.2f' % tested.score
           %td= link_to (tested.score.nil? ? "Vervolledig test" : "Toon test"), survey_taken_path(tested)
 -else
   %p Nog niet getest.

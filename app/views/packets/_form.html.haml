@@ -13,8 +13,8 @@
   %h3 Woorden
   %p Let er zeker op dat je de woorden correct invult, zodat je ook correct overhoord wordt.
   %p
-    Als je in een tekstveld op <tab> drukt, spring je naar het volgende veld.
-    Als je in het laatste veld op <tab> druk, begin je automatisch aan een nieuw woord.
+    Om naar een volgend veld te gaan, kun je ook de TAB-toets gebruiken.
+    Als je in het laatste veld op TAB drukt, spring je naar een nieuw veld.
 
   = f.fields_for :words do |word_form|
     = render :partial => 'word', :locals => { :f => word_form}

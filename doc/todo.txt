@@ -9,23 +9,23 @@ To Do
 
 * in the list of surveys show an overview of the test-results (list of taken tests)
 
-* style-style-style!!! improve layout!
+X style-style-style!!! improve layout!
 
 * localise all texts + supply english translations
 
 * make language an option (use http-accepts header?)
 
-* show name of logged-on user
+X show name of logged-on user
 
 * logged-on user should be able to "visibly" edit her fullname and nick
 
-* toon alleen je eigen tests in de lijst van testen
+X toon alleen je eigen tests in de lijst van testen
 
 * informatie
   - leg uit dat je eerst een test moet aanmaken voor je kan testen
   - leg uit dat je met tab naar het volgende veld kan gaan
 
-* home-> test jezelf linkt fout door
+X home-> test jezelf linkt fout door
 
 * voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
 
@@ -34,7 +34,9 @@ To Do
 * aanpassen van account moet mogelijk zijn: doortesten!
   --> je kan naam/volledige naam niet ingeven/aanpassen
 
+* verwijderen van testen lukt nog niet
 
+* configure time zone correctly!!
 
 
 -------------------------

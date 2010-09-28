@@ -2,6 +2,9 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 nl:
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
   tabs:
     root: Home
     surveys: Testen
@@ -19,19 +22,19 @@ nl:
       done: Toon resultaat
   home:
     index:
-      short_description: Op deze website kan je zelf woordenlijsten samenstellen en je testen.
+      short_description: Op deze website kan je zelf woordenlijsten samenstellen en je laten testen.
       operation: Werkwijze
       description_step1:
         Maak een woordenlijst aan, met daarin woorden en hun vertaling.
         Het aantal woorden is onbeperkt.
         Je kan meerdere woordenlijsten aanmaken.
       description_step2:
-        Maak een test. Een test bevat een aantal woordenlijsten,
+        Stel een test samen. Een test bevat een aantal woordenlijsten,
         die je zelf kan selecteren.
       description_step3:
         Neem de test. Alle woorden worden in een willekeurige volgorde overlopen, waarbij jij telkens
         de (goede) vertaling moet geven. De computer zal je score bijhouden.
-      next_action: Kies wat je wil doen
+      next_action: Kies wat je wilt doen
       add_packet: Maak een woordenlijst
       add_survey: Maak een test
       do_test: Test jezelf

@@ -8,7 +8,7 @@
     %h2= @question.word.original
   .field
     = label_tag :answer, t('survey_taken.labels.answer')
-    = text_field_tag :answer, '', :class => "autofocus"
+    = text_field_tag :answer, '', :class => "autofocus", :autocomplete => "off"
   .field
     = submit_tag t('survey_taken.labels.next')
 
