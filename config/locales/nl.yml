@@ -32,5 +32,6 @@ nl:
         Neem de test. Alle woorden worden in een willekeurige volgorde overlopen, waarbij jij telkens
         de (goede) vertaling moet geven. De computer zal je score bijhouden.
       next_action: Kies wat je wil doen
-      add_packet: Voeg een nieuwe woordenlijst toe
+      add_packet: Maak een woordenlijst
+      add_survey: Maak een test
       do_test: Test jezelf

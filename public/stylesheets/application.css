@@ -68,7 +68,7 @@ h3 {
   font-family: Palatino, Georgia, "Times New Roman", serif;
   font-size: 161.6%;
   border-bottom: 1px solid #666666;
-  margin: 0.75em 0 0.5em 0;
+  margin: 1.2em 0 0.5em 0;
   padding: 0 0 0.25em 0; }
 
 .errorExplanation {
@@ -83,7 +83,7 @@ h3 {
   .errorExplanation li {
     list-style: disc inside none; }
 
-.warning {
+.warning, .alert {
   background-color: #fff6bf;
   border: 1px solid #ffd324;
   margin: 0 0 1.5em;
@@ -115,7 +115,7 @@ h3 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -khtml-border-radius: 10px;
-  background-color: white;
+  background-color: #e1ecde;
   margin: 2em auto 0;
   padding: 1em 3em 1em;
   width: 400px; }
@@ -127,14 +127,14 @@ h3 {
     display: block;
     float: left;
     margin: 0 10px 0 0;
-    width: 70px; }
+    width: 160px; }
   #login input {
     background-color: #fafafa;
     border: 1px solid #dddddd;
     padding: 3px; }
-  #login input#user_session_remember_me {
-    margin: 0 0 0 80px; }
-    #login input#user_session_remember_me + label {
+  #login input#user_remember_me {
+    margin: 0; }
+    #login input#user_remember_me + label {
       display: inline;
       float: none; }
   #login input#user_session_submit {
@@ -151,7 +151,7 @@ h3 {
     border-width: 1px;
     cursor: pointer;
     padding: 0.5em 1em;
-    margin: 0 0 0 80px; }
+    margin-left: 0; }
     #login input#user_session_submit:hover {
       background-color: #f0f0f0;
       background: -moz-linear-gradient(-90deg, #fafafa, #d9d9d9) repeat scroll 0 0 transparent;

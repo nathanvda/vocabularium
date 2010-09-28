@@ -12,5 +12,9 @@
       %p= t 'home.index.description_step3'
 
 %h3= t 'home.index.next_action'
-%p= link_to t('home.index.add_packet'), new_packet_path
-%p= link_to t('home.index.do_test'), new_survey_path
+
+%table.start_actions
+  %tr
+    %td= link_to t('home.index.add_packet'), new_packet_path
+    != home_link_to_new_test(current_user)
+    != home_link_to_do_test(current_user)

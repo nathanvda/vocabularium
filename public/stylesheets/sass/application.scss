@@ -32,7 +32,7 @@ h3{
     font-family: Palatino, Georgia, "Times New Roman", serif;
     font-size: 161.6%;
     border-bottom: 1px solid $heading3_border_color;
-    margin: 0.75em 0 0.5em 0;
+    margin: 1.2em 0 0.5em 0;
     padding: 0 0 0.25em 0;
 }
 
@@ -53,7 +53,7 @@ h3{
     }
 }
 
-.warning{
+.warning, .alert{
     background-color: $warning_box_background_color;
     border: 1px solid $warning_box_border_color;
     margin: 0 0 1.5em;
@@ -91,7 +91,7 @@ h3{
 
 #login{
     @include border_radius(10px);
-    background-color: $login_container_background_color;
+    background-color: $complementary_color_lighter;
     margin: 2em auto 0;
     padding: 1em 3em 1em;
     width: 400px;
@@ -108,7 +108,7 @@ h3{
         display: block;
         float: left;
         margin: 0 10px 0 0;
-        width: 70px;
+        width: 160px;
     }
 
     input{
@@ -117,8 +117,8 @@ h3{
         padding: 3px;
     }
 
-    input#user_session_remember_me{
-        margin: 0 0 0 80px;
+    input#user_remember_me{
+        margin: 0;
 
         & + label{
             display: inline;
@@ -130,7 +130,7 @@ h3{
         @include border_radius(5px);
         @include button_background_gradient($button_light_background_color, $button_dark_background_color);
         @include button($button_border_top_color, $button_border_right_color, $button_border_bottom_color, $button_border_left_color);
-        margin: 0 0 0 80px
+        margin-left: 0;
     }
 }
 

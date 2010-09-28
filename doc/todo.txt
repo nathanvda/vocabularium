@@ -29,7 +29,10 @@ To Do
 
 * voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
 
-*
+* reset-password procedure doortesten en alle teksten verbeteren en correct vertalen
+
+* aanpassen van account moet mogelijk zijn: doortesten!
+  --> je kan naam/volledige naam niet ingeven/aanpassen
 
 
 

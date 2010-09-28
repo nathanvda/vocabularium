@@ -29,9 +29,6 @@
         = navigation_tab(:root)
         = navigation_tab(:packets)
         = navigation_tab(:surveys)
-        =#.nav_link=link_to "Home", root_path
-        =#.nav_link=link_to "Woordenlijsten", packets_path
-        =#.nav_link=link_to "Overhoren", surveys_path
     #main
       - flash.each do |name, msg|
         %div{:class => [name," message"], :id => "flash_#{name}"}

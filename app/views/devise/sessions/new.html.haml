@@ -1,16 +1,16 @@
-%h2 Aanmelden
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %p
-    = f.label :email
-    %br/
-    = f.text_field :email
-  %p
-    = f.label :password, 'Paswoord'
-    %br/
-    = f.password_field :password
-  - if devise_mapping.rememberable?
-    %p
-      = f.check_box :remember_me
-      = f.label :remember_me, 'Onthou mijn gegevens'
-  %p= f.submit "Aanmelden"
-= render :partial => "devise/shared/links"
+#login
+  %h2 Aanmelden
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      = f.text_field :email
+    .field
+      = f.label :password, 'Paswoord'
+      = f.password_field :password
+    - if devise_mapping.rememberable?
+      .field
+        = f.label :remember_me, 'Onthoud mijn gegevens'
+        = f.check_box :remember_me
+    .field
+      = f.submit "Aanmelden"
+  = render :partial => "devise/shared/links"

@@ -28,8 +28,8 @@ a:hover, a:active, a:focus{
 }
 
 #header{
-    background-color: $header_background_color;
-    /*background: url("/images/banner_bg-light.png") repeat-x;*/
+    /*background-color: $header_background_color;*/
+    background: url("/images/banner_bg-color.png") repeat-x;
     height: 100px;
     padding: 1em 1em 0;
     position: relative;
@@ -45,7 +45,7 @@ a:hover, a:active, a:focus{
 
     h1 {
         float:left;
-        text-align:right; background: url("/images/vocabularium-header-2.png") no-repeat;
+        text-align:right; background: url("/images/vocabularium-header-white.png") no-repeat;
         height: 98px; width:590px;
         margin-left:15px;
         .hideText {
@@ -137,13 +137,16 @@ ol {
     color: $complementary_color_vivid;
     list-style-type: decimal;
     counter-reset: item;
-    height:200px;
+    height:220px;
+    margin-right:10px;
+
 
     li:before {
         clear:left;
         content: counter(item) "."; counter-increment: item;
         margin-top:10px;
         margin-left:10px;
+        margin-right:10px;
         display:block;
         float:left;
         width:40px;
@@ -153,7 +156,7 @@ ol {
     li {
         @include border_radius(10px);
         /*display:block;*/
-        background-color: $complementary_color_lighter;
+        background-color: $complementary_color_light;
     }
 
     p {
@@ -165,4 +168,36 @@ ol {
         width:500px;
         height:50px;
     }
+}
+
+table.start_actions {
+    width:100%;
+    padding-left: 30px;
+    padding-right: 0;
+    border-collapse:separate;
+    border-spacing:10px;
+
+    td {
+        @include border_radius(10px);
+        background-color: $primary_color_vivid;
+        width: 30%;
+        padding: 20px;
+        font-size: 150%;
+        text-align:center;
+
+        a, a:link, a:visited{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover, a:active, a:focus{
+            color: orange;
+            text-decoration: underline;
+        }
+    }
+    td.disabled {
+        background-color: $complementary_color_lighter;
+        color: $primary_color_pastel;
+    }
+
 }
