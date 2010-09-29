@@ -1,12 +1,13 @@
 %h1 Lijst van testen
 
-%table
-  %tr
-    %th Naam
-    %th Aantal lijsten
-    %th Aantal woorden
-    %th Genomen testen
-    %th
+%table.grid
+  %thead
+    %tr
+      %th Naam
+      %th Aantal lijsten
+      %th Aantal woorden
+      %th Genomen testen
+      %th
 
   - @surveys.each do |survey|
     %tr

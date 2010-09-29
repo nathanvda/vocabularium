@@ -2,23 +2,23 @@
 %p= "De test is afgelegd op #{@survey_taken.updated_at}"
 
 %h3 Resultaat
-%table
+%table.datatable-details
   %tr
     %td Juiste antwoorden
     %td= "#{@survey_taken.nr_correct} / #{@survey_taken.nr_questions} "
   %tr
     %td Score
-    %td= @survey_taken.score
+    %td= '%.2f' % @survey_taken.score
 
 
 %h3 Antwoorden
-%table
+%table.grid
   %thead
     %tr
-      %td #
-      %td Vraag
-      %td Antwoord
-      %td Juist antwoord
+      %th #
+      %th Vraag
+      %th Antwoord
+      %th Juist antwoord
   %tbody
     - @survey_taken.survey_questions.each do |question|
       %tr

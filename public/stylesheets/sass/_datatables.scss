@@ -12,7 +12,7 @@
 
 .datatable-with-row-hover{
     @extend .datatable-defaults;
-    thead th{
+    thead th {
         background-color: $datatable_header_background_color;
         color: $loud_text_color;
         font-weight: bold;

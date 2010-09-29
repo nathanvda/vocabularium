@@ -51,7 +51,7 @@ $input_field_border_top_color: #999;
 $input_field_border_right_color: #EEE;
 $input_field_border_bottom_color: #DDD;
 $input_field_border_left_color: #CCC;
-$input_field_error_background_color: #FFE3E3;
+$input_field_error_background_color: #EB919C;
 
 $grouping_box_border_color: #CCC;
 
@@ -84,9 +84,9 @@ $header_link_color: white;
 $header_link_focus_color: orange;
 
 // tables
-$datatable_header_background_color: #D9EBF9;
+$datatable_header_background_color: $complementary_color_pastel;
 $datatable_body_border_color: #DDDDDD;
-$datatable_body_focus_background_color: #F2F6FF;
+$datatable_body_focus_background_color: $complementary_color_lighter;
 $datatable_details_header_background_color: #F0F0F0;
 $datatable_details_body_border_color: #D0D0D0;
 

@@ -1,6 +1,6 @@
 %h3= "Test: #{@survey.name}"
 
-%table
+%table.grid
   %thead
     %tr
       %th Woord
@@ -15,7 +15,7 @@
 %h3 Resultaten
 
 -if @survey.survey_takens.size > 0
-  %table
+  %table.grid
     %thead
       %tr
         %th Test begonnen

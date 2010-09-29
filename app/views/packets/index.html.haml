@@ -1,10 +1,11 @@
 %h1 Woordenlijsten
 
-%table
-  %tr
-    %th Naam
-    %th Aantal woorden
-    %th
+%table.grid
+  %thead
+    %tr
+      %th Naam
+      %th Aantal woorden
+      %th
 
   - @packets.each do |packet|
     %tr

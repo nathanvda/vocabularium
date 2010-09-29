@@ -4,28 +4,14 @@ To Do
 
 * add more tests!!!!
 
-* make sure that evaluating whether a question is correct gets smarter
-  - take into account that multiple words could be entered --> convert to array on comma or semi-colon
-
 * in the list of surveys show an overview of the test-results (list of taken tests)
-
-X style-style-style!!! improve layout!
 
 * localise all texts + supply english translations
 
 * make language an option (use http-accepts header?)
 
-X show name of logged-on user
-
 * logged-on user should be able to "visibly" edit her fullname and nick
-
-X toon alleen je eigen tests in de lijst van testen
-
-* informatie
-  - leg uit dat je eerst een test moet aanmaken voor je kan testen
-  - leg uit dat je met tab naar het volgende veld kan gaan
-
-X home-> test jezelf linkt fout door
+  - als je een nieuwe use aanmaakt, zouden die velden ook aan te passen moeten zijn
 
 * voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
 
@@ -38,10 +24,38 @@ X home-> test jezelf linkt fout door
 
 * configure time zone correctly!!
 
+* bij tonen v/e test:
+  - maak lijst van woorden optioneel (wordt soms erg lang) (paginatie?)
+  - switch volgorde om: eerst test-resultaten dan woorden
+
+* bij tonen test-resultaten
+  - gebruik kleine ikoontjes
+  - toon alleen foute woorden (en optioneel de juiste)
+
+* bij afnemen test:
+  - versnel het naar de volgende vraag/woord gaan? nodig? (was traag op Kate's pc)
+  - mss moet ik nog wat indexen aanmaken?
+
+
 
 -------------------------
 Done
 -------------------------
+
+x make sure that evaluating whether a question is correct gets smarter
+  x take into account that multiple words could be entered --> convert to array on comma or semi-colon
+
+X informatie
+  X leg uit dat je eerst een test moet aanmaken voor je kan testen
+  X leg uit dat je met tab naar het volgende veld kan gaan
+
+X style-style-style!!! improve layout!
+
+X toon alleen je eigen tests in de lijst van testen
+
+X home-> test jezelf linkt fout door
+
+X show name of logged-on user
 
 X in the 'give the answer'-form: make sure that the text-box gets the focus automatically
 

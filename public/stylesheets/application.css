@@ -26,13 +26,13 @@
   padding: 0.5em; }
 
 .datatable-with-row-hover thead th, .grid table thead th, table.grid thead th {
-  background-color: #d9ebf9;
+  background-color: #7a9473;
   color: black;
   font-weight: bold; }
 .datatable-with-row-hover tbody td, .grid table tbody td, table.grid tbody td {
   border-bottom: 1px solid #dddddd; }
 .datatable-with-row-hover tbody tr:hover > *, .grid table tbody tr:hover > *, table.grid tbody tr:hover > * {
-  background-color: #f2f6ff; }
+  background-color: #e1ecde; }
 
 .datatable-details tbody td:first-child, table.compact tbody td:first-child {
   background-color: #f0f0f0;
@@ -169,10 +169,10 @@ body.user_sessions .error, body.user_sessions .warning, body.user_sessions .noti
 h1 + form {
   margin-top: 1.5em; }
 
-.field_with_errors {
-  margin: 0 0 10px 0; }
-  .field_with_errors > input {
-    background-color: #ffe3e3; }
+.field_with_errors > label {
+  color: red; }
+.field_with_errors > input {
+  background-color: #eb919c; }
 
 form input[type="text"], form input[type="password"] {
   border-color: #999999 #eeeeee #dddddd #cccccc;

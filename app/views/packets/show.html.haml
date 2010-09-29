@@ -1,9 +1,10 @@
 %h3= "Woordenlijst #{@packet.name}"
 
-%table
-  %tr
-    %th Woord
-    %th Vertaling
+%table.grid
+  %thead
+    %tr
+      %th Woord
+      %th Vertaling
   - @packet.words.each do |word|
     %tr
       %td= word.original
