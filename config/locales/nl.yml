@@ -5,6 +5,39 @@ nl:
   time:
     formats:
       default: "%Y-%m-%d %H:%M:%S"
+
+  activemodel:
+    errors:
+      template:
+        header:
+          one:   "1 fout voorkwam dat dit %{model} kon bewaard worden"
+          other: "%{count} fouten voorkwamen dat deze %{model} kon bewaard worden"
+        body:    "Er waren problemen met de volgende velden:"
+
+  errors:
+    template:
+      body: "Controleer alstublieft de volgende velden:"
+      header:
+        one: "Kon dit {{model}} object niet opslaan: 1 fout."
+        other: "Kon dit {{model}} niet opslaan: {{count}} fouten."
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "1 fout voorkwam dat dit %{model} kon bewaard worden"
+          other: "%{count} fouten voorkwamen dat deze %{model} kon bewaard worden"
+        body:    "Er waren problemen met de volgende velden:"
+      messages:
+        blank: Gelieve het veld %{attribute} in te vullen!
+    models:
+      survey: test
+      packet: woordenlijst
+      user: gebruiker
+    attributes:
+      survey:
+        name: Naam
+
   tabs:
     root: Home
     surveys: Testen
@@ -36,5 +69,5 @@ nl:
         de (goede) vertaling moet geven. De computer zal je score bijhouden.
       next_action: Kies wat je wilt doen
       add_packet: Maak een woordenlijst
-      add_survey: Maak een test
+      add_survey: Stel een test samen
       do_test: Test jezelf
