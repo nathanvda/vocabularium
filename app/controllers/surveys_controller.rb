@@ -25,6 +25,7 @@ class SurveysController < ApplicationController
     if @survey.save
       redirect_to(surveys_path, :notice => 'Test was succesvol aangemaakt.')
     else
+      @packets = Packet.owned_by(current_user)
       render :action => "new"
     end
   end
