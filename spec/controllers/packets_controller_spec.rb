@@ -14,7 +14,7 @@ describe PacketsController do
 
   describe "GET index" do
     it "assigns all packets as @packets" do
-      Packet.stub(:all) { [mock_packet] }
+      Packet.stub(:owned_by) { [mock_packet] }
       get :index
       assigns(:packets).should eq([mock_packet])
     end
@@ -22,7 +22,9 @@ describe PacketsController do
 
   describe "GET show" do
     it "assigns the requested packet as @packet" do
-      Packet.stub(:find).with("37") { mock_packet }
+      mock_finder = mock(Packet)
+      mock_finder.stub(:find).with("37") { mock_packet }
+      Packet.stub(:owned_by) { mock_finder }
       get :show, :id => "37"
       assigns(:packet).should be(mock_packet)
     end
@@ -38,7 +40,9 @@ describe PacketsController do
 
   describe "GET edit" do
     it "assigns the requested packet as @packet" do
-      Packet.stub(:find).with("37") { mock_packet }
+      mock_finder = mock(Packet)
+      mock_finder.stub(:find).with("37") { mock_packet }
+      Packet.stub(:owned_by) { mock_finder }
       get :edit, :id => "37"
       assigns(:packet).should be(mock_packet)
     end
@@ -80,7 +84,9 @@ describe PacketsController do
 
     describe "with valid params" do
       it "updates the requested packet" do
-        Packet.should_receive(:find).with("37") { mock_packet }
+        mock_finder = mock(Packet)
+        mock_finder.stub(:find).with("37") { mock_packet }
+        Packet.stub(:owned_by) { mock_finder }
         mock_packet.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :packet => {'these' => 'params'}
       end
@@ -116,13 +122,17 @@ describe PacketsController do
 
   describe "DELETE destroy" do
     it "destroys the requested packet" do
-      Packet.should_receive(:find).with("37") { mock_packet }
+      mock_finder = mock(Packet)
+      mock_finder.stub(:find).with("37") { mock_packet }
+      Packet.stub(:owned_by) { mock_finder }
       mock_packet.should_receive(:destroy)
       delete :destroy, :id => "37"
     end
 
     it "redirects to the packets list" do
-      Packet.stub(:find) { mock_packet }
+      mock_finder = mock(Packet)
+      mock_finder.stub(:find) { mock_packet }
+      Packet.stub(:owned_by) { mock_finder }
       delete :destroy, :id => "1"
       response.should redirect_to(packets_url)
     end

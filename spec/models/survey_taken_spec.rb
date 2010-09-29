@@ -20,7 +20,7 @@ describe SurveyTaken do
       @survey_taken.nr_questions.should == 2
     end
     it "should be have correctly set nr correct" do
-       @survey_taken.nr_correct.should == 0
+       @survey_taken.nr_correct.should be_nil
     end
     it "should be have correctly set current question" do
       @survey_taken.current_question.should == 0
