@@ -19,4 +19,15 @@ module ApplicationHelper
     end
   end
 
+  def switch_visibility_link(label, hide_selector, show_selector, initial_class = '', id_str = nil)
+    classes = ["switch_link"]
+    classes << initial_class.to_s
+    html_options = { :class => classes.join(' '),
+                     :'data-show' => show_selector,
+                     :'data-hide' => hide_selector
+                   }
+    html_options[:id] = id_str.to_s unless id_str.nil?
+    link_to(label, "#", html_options )
+  end
+
 end

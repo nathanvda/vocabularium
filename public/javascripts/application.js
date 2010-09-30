@@ -19,5 +19,13 @@ $(function() {
   });
 
   $('.autofocus').focus();
+
+  $('.switch_link').live('click', function () {
+    var hide_sel = $(this).attr('data-hide');
+    var show_sel = $(this).attr('data-show');
+    $(hide_sel).hide();
+    $(show_sel).show();
+    return false;
+  });
 });
 

@@ -1,6 +1,6 @@
 %h3= "Test: #{@survey.name}"
 
-%table.grid
+%table.grid.hidden
   %thead
     %tr
       %th Woord
@@ -11,6 +11,10 @@
         %tr
           %td= word.original
           %td= word.translation
+
+%div
+  = switch_visibility_link("Toon alle woorden", '#show-words-link', '.grid, #hide-words-link', '', 'show-words-link')
+  = switch_visibility_link("Verberg alle woorden", '#hide-words-link, .grid', '#show-words-link', 'hidden', 'hide-words-link')
 
 %h3 Resultaten
 

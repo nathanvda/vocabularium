@@ -4,21 +4,13 @@ To Do
 
 * add more tests!!!!
 
-* in the list of surveys show an overview of the test-results (list of taken tests)
-
 * localise all texts + supply english translations
 
 * make language an option (use http-accepts header?)
 
-* logged-on user should be able to "visibly" edit her fullname and nick
-  - als je een nieuwe use aanmaakt, zouden die velden ook aan te passen moeten zijn
-
 * voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
 
 * reset-password procedure doortesten en alle teksten verbeteren en correct vertalen
-
-* aanpassen van account moet mogelijk zijn: doortesten!
-  --> je kan naam/volledige naam niet ingeven/aanpassen
 
 * verwijderen van testen lukt nog niet
 
@@ -29,7 +21,7 @@ To Do
   - switch volgorde om: eerst test-resultaten dan woorden
 
 * bij tonen test-resultaten
-  - gebruik kleine ikoontjes
+  X gebruik kleine ikoontjes
   - toon alleen foute woorden (en optioneel de juiste)
 
 * bij afnemen test:
@@ -41,6 +33,11 @@ To Do
 -------------------------
 Done
 -------------------------
+
+X logged-on user should be able to "visibly" edit her fullname and nick
+  X als je een nieuwe use aanmaakt, zouden die velden ook aan te passen moeten zijn
+
+X in the list of surveys show an overview of the test-results (list of taken tests)
 
 x make sure that evaluating whether a question is correct gets smarter
   x take into account that multiple words could be entered --> convert to array on comma or semi-colon

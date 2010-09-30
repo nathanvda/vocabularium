@@ -114,6 +114,9 @@ h3 {
   .filter input[type="submit"] {
     padding: 0.25em 0.5em; }
 
+.hidden {
+  display: none; }
+
 #login {
   border-radius: 10px;
   -moz-border-radius: 10px;
