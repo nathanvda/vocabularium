@@ -11,5 +11,11 @@
     = f.label :password_confirmation, t('devise.form.password_confirmation')
     = f.password_field :password_confirmation
   .field
+    = f.label :name, t('devise.form.nickname')
+    = f.text_field :name
+  .field
+    = f.label :fullname, t('devise.form.fullname')
+    = f.text_field :fullname
+  .field
     = f.submit t('devise.form.sign_up')
 = render :partial => "devise/shared/links"

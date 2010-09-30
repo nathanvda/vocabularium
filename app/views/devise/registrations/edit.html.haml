@@ -1,5 +1,5 @@
 %h2
-  Wijzig #{resource_name.to_s.humanize}
+  Wijzig je gegevens
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   .field
@@ -7,11 +7,11 @@
     = f.text_field :email
   .field
     = f.label :password, t('devise.form.password')
-    = f.password_field :password
+    = f.password_field :password, :autocomplete => "off"
     %i (laat leeg als je je paswoord niet wil wijzigen)
   .field
     = f.label :password_confirmation, t('devise.form.password_confirmation')
-    = f.password_field :password_confirmation
+    = f.password_field :password_confirmation, :autocomplete => "off"
   .field
     = f.label :name, t('devise.form.nickname')
     = f.text_field :name
