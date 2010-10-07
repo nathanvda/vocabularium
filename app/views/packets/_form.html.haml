@@ -1,13 +1,8 @@
 = form_for @packet do |f|
-  -if @packet.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@packet.errors.count, "error")} prohibited this packet from being saved:"
-      %ul
-        - @packet.errors.full_messages.each do |msg|
-          %li= msg
+  = error_messages_for(@packet)
 
   .field
-    = f.label :name, "Naam"
+    = f.label :name, t('activerecord.attributes.packet.name')
     = f.text_field :name
 
   %h3 Woorden

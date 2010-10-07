@@ -6,28 +6,20 @@ nl:
     formats:
       default: "%Y-%m-%d %H:%M:%S"
 
-  activemodel:
-    errors:
-      template:
-        header:
-          one:   "1 fout voorkwam dat dit %{model} kon bewaard worden"
-          other: "%{count} fouten voorkwamen dat deze %{model} kon bewaard worden"
-        body:    "Er waren problemen met de volgende velden:"
-
   errors:
     template:
       body: "Controleer alstublieft de volgende velden:"
       header:
-        one: "Kon dit {{model}} object niet opslaan: 1 fout."
-        other: "Kon dit {{model}} niet opslaan: {{count}} fouten."
+        one: "Kon {{model}} niet opslaan: 1 fout."
+        other: "Kon {{model}} niet opslaan: {{count}} fouten."
 
   activerecord:
     errors:
       template:
+        body: "Controleer alstublieft de volgende velden:"
         header:
-          one:   "1 fout voorkwam dat dit %{model} kon bewaard worden"
-          other: "%{count} fouten voorkwamen dat deze %{model} kon bewaard worden"
-        body:    "Er waren problemen met de volgende velden:"
+          one: "Kon {{model}} niet opslaan: 1 fout."
+          other: "Kon {{model}} niet opslaan: {{count}} fouten."
       messages:
         blank: Gelieve het veld %{attribute} in te vullen!
     models:
@@ -36,6 +28,8 @@ nl:
       user: gebruiker
     attributes:
       survey:
+        name: Naam
+      packet:
         name: Naam
 
   tabs:
@@ -48,6 +42,8 @@ nl:
     edit: Wijzig
     destroy: Verwijder
     you_sure: Ben je zeker?
+  survey:
+    not_taken_yet: Nog niet getest
   survey_taken:
     labels:
       answer: Je antwoord
