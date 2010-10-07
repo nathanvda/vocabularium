@@ -14,25 +14,37 @@ To Do
 
 * verwijderen van testen lukt nog niet
 
-* configure time zone correctly!!
-
 * bij tonen v/e test:
-  - maak lijst van woorden optioneel (wordt soms erg lang) (paginatie?)
+  X maak lijst van woorden optioneel (wordt soms erg lang) (paginatie?)
   - switch volgorde om: eerst test-resultaten dan woorden
 
 * bij tonen test-resultaten
   X gebruik kleine ikoontjes
-  - toon alleen foute woorden (en optioneel de juiste)
+  X toon alleen foute woorden (en optioneel de juiste)
+  - verzeker/verifieer: correctheid ve vraag mag NIET opnieuw berekend worden!!
 
 * bij afnemen test:
   - versnel het naar de volgende vraag/woord gaan? nodig? (was traag op Kate's pc)
   - mss moet ik nog wat indexen aanmaken?
 
+* add admin-part, a console, where i can see the users/tests/.. some reports ...
+  - add graphs to admin-part: use flot/flotilla?
 
+* at the survey-show screen: also show a graph of the results of the different tests, if more than 1 result!
+
+* investigate whether it is possible to only test the wrong words again after a test?
+
+* sometimes the user can enter empty words by accident; how to prevent this?
+  should we always give an answer? So we make it a required field.
+  We use client-side validation using jquery.validate
 
 -------------------------
 Done
 -------------------------
+
+X toon de hoogst behaalde score in het overzicht (surveys#index)
+
+X configure time zone correctly!!
 
 X logged-on user should be able to "visibly" edit her fullname and nick
   X als je een nieuwe use aanmaakt, zouden die velden ook aan te passen moeten zijn

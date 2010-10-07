@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100923172051) do
+ActiveRecord::Schema.define(:version => 20101003150744) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20100923172051) do
   end
 
   add_index "survey_questions", ["survey_taken_id"], :name => "index_survey_questions_on_survey_taken_id"
+  add_index "survey_questions", ["word_id"], :name => "index_survey_questions_on_word_id"
 
   create_table "survey_takens", :force => true do |t|
     t.integer  "survey_id"

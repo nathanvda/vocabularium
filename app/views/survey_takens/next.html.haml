@@ -1,5 +1,5 @@
 %h1= "Test-resultaten van test #{@survey_taken.survey.name}"
-%p= "De test is afgelegd op #{@survey_taken.updated_at}"
+%p= "De test is afgelegd op #{l @survey_taken.updated_at}"
 
 %h3 Resultaat
 %table.datatable-details
@@ -21,13 +21,15 @@
       %th Juist antwoord
   %tbody
     - @survey_taken.survey_questions.each do |question|
-      %tr
+      %tr{:class => "#{question.is_correct? ? 'correct hidden' : 'wrong'}"}
         %td= question.order
         %td= question.word.original
         %td!= get_question_answer(question)
         %td= question.word.translation
 
 
-%table
+%div
+  = switch_visibility_link("Toon correcte antwoorden", '#show-correctwords-link', '.correct, #hide-correctwords-link', '', 'show-correctwords-link')
+  = switch_visibility_link("Verberg correcte antwoorden", '#hide-correctwords-link, .correct', '#show-correctwords-link', 'hidden', 'hide-correctwords-link')
 
 = link_to "Terug", surveys_path

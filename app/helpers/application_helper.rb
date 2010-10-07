@@ -30,4 +30,8 @@ module ApplicationHelper
     link_to(label, "#", html_options )
   end
 
+  def float_to_s(fl)
+    fl.nil? ? '' : '%.2f' % fl
+  end
+
 end

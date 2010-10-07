@@ -18,5 +18,15 @@ class Survey < ActiveRecord::Base
     words
   end
 
+  def best_result
+    unless survey_takens.size == 0
+      max = 0.0
+      survey_takens.each do |taken_test|
+        max = taken_test.score if taken_test.score.present? && taken_test.score > max
+      end
+      max
+    end
+  end
+
   scope :owned_by, lambda { |user| where("user_id = ?", user.id) }
 end

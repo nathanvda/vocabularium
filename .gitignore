@@ -13,6 +13,9 @@ public/javascripts/all_1.js
 # metric_fu :
 scratch_directory
 
+# rcov
+coverage
+
 # bundler
 .bundle
 vendor/cache

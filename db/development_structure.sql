@@ -17,7 +17,7 @@ CREATE TABLE `packets` (
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_packets_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) NOT NULL,
@@ -44,8 +44,9 @@ CREATE TABLE `survey_questions` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_survey_questions_on_survey_taken_id` (`survey_taken_id`),
+  KEY `index_survey_questions_on_word_id` (`word_id`),
   CONSTRAINT `survey_questions_survey_taken_id_fk` FOREIGN KEY (`survey_taken_id`) REFERENCES `survey_takens` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `survey_takens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -59,7 +60,7 @@ CREATE TABLE `survey_takens` (
   PRIMARY KEY (`id`),
   KEY `index_survey_takens_on_survey_id` (`survey_id`),
   CONSTRAINT `survey_takens_survey_id_fk` FOREIGN KEY (`survey_id`) REFERENCES `surveys` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `surveys` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -69,7 +70,7 @@ CREATE TABLE `surveys` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_surveys_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -91,7 +92,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_users_on_email` (`email`),
   UNIQUE KEY `index_users_on_reset_password_token` (`reset_password_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `words` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -101,7 +102,7 @@ CREATE TABLE `words` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 INSERT INTO schema_migrations (version) VALUES ('20100911094020');
 
@@ -122,3 +123,5 @@ INSERT INTO schema_migrations (version) VALUES ('20100920202309');
 INSERT INTO schema_migrations (version) VALUES ('20100921194023');
 
 INSERT INTO schema_migrations (version) VALUES ('20100923172051');
+
+INSERT INTO schema_migrations (version) VALUES ('20101003150744');

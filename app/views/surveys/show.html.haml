@@ -33,8 +33,8 @@
           %td= l tested.created_at
           %td= l tested.updated_at
           %td== #{tested.nr_correct} / #{tested.nr_questions}
-          %td= tested.score.nil? ? 'not completed yet' : '%.2f' % tested.score
-          %td= link_to (tested.score.nil? ? "Vervolledig test" : "Toon test"), survey_taken_path(tested)
+          %td= show_score(tested.score)
+          %td= link_to (tested.nr_correct.nil? ? "Vervolledig test" : "Toon test"), survey_taken_path(tested)
 -else
   %p Nog niet getest.
 
