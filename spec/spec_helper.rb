@@ -1,9 +1,13 @@
 ENV["RAILS_ENV"] ||= 'test'
+require 'simplecov'
+SimpleCov.start 'rails'
+
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'remarkable/active_record'
 
 require 'webrat'
+
 
 
 # shared constants for different tests

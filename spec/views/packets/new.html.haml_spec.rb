@@ -11,7 +11,8 @@ describe "packets/new.html.haml" do
   it "renders new packet form" do
     render
 
-    rendered.should have_selector("form", :action => packets_path, :method => "post") do |form|
+#    rendered.should have_selector("form", :action => packets_path, :method => "post") do |form|
+    rendered.should have_selector("form", :method => "post") do |form|
       form.should have_selector("input#packet_name", :name => "packet[name]")
     end
   end

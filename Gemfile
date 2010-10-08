@@ -37,6 +37,7 @@ group :development, :test do
   #gem "rspec-rails", ">= 2.0.0.beta.18"
   gem "rspec-rails", :git => 'http://github.com/rspec/rspec-rails.git'
   gem "autotest"
+  gem 'simplecov', :require => false
 end
 
 # test-environment gems

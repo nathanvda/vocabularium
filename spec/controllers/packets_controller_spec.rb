@@ -92,13 +92,17 @@ describe PacketsController do
       end
 
       it "assigns the requested packet as @packet" do
-        Packet.stub(:find) { mock_packet(:update_attributes => true) }
+        mock_finder = mock(Packet)
+        mock_finder.stub(:find) { mock_packet(:update_attributes => true) }
+        Packet.stub(:owned_by) { mock_finder }
         put :update, :id => "1"
         assigns(:packet).should be(mock_packet)
       end
 
       it "redirects to the packet" do
-        Packet.stub(:find) { mock_packet(:update_attributes => true) }
+        mock_finder = mock(Packet)
+        mock_finder.stub(:find) { mock_packet(:update_attributes => true) }
+        Packet.stub(:owned_by) { mock_finder }
         put :update, :id => "1"
         response.should redirect_to(packet_url(mock_packet))
       end
@@ -106,13 +110,17 @@ describe PacketsController do
 
     describe "with invalid params" do
       it "assigns the packet as @packet" do
-        Packet.stub(:find) { mock_packet(:update_attributes => false) }
+        mock_finder = mock(Packet)
+        mock_finder.stub(:find) { mock_packet(:update_attributes => false) }
+        Packet.stub(:owned_by) { mock_finder }
         put :update, :id => "1"
         assigns(:packet).should be(mock_packet)
       end
 
       it "re-renders the 'edit' template" do
-        Packet.stub(:find) { mock_packet(:update_attributes => false) }
+        mock_finder = mock(Packet)
+        mock_finder.stub(:find) { mock_packet(:update_attributes => false) }
+        Packet.stub(:owned_by) { mock_finder }
         put :update, :id => "1"
         response.should render_template("edit")
       end
