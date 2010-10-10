@@ -44,6 +44,8 @@ nl:
     you_sure: Ben je zeker?
   survey:
     not_taken_yet: Nog niet getest
+    take_test: Doe de test
+    make_new: Nieuwe test aanmaken
   survey_taken:
     labels:
       answer: Je antwoord

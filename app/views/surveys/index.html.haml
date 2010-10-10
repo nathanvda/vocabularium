@@ -18,11 +18,11 @@
       %td= survey.survey_takens.size
       %td= show_score(survey.best_result)
       %td
-        = link_to "Doe de Test", take_survey_path(survey)
+        = link_to t('survey.take_test'), take_survey_path(survey)
         = link_to t('common.show'), survey
         = link_to t('common.edit'), edit_survey_path(survey)
         = link_to t('common.destroy'), survey, :confirm => t('common.you_sure'), :method => :delete
 
 %br
 
-= link_to 'Nieuwe test aanmaken', new_survey_path
+= link_to t('survey.make_new'), new_survey_path

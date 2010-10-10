@@ -2,7 +2,7 @@
 
 %p= "Vraag #{@survey_taken.current_question + 1}/#{@survey_taken.nr_questions}"
 
-= form_tag next_survey_question_url(@survey_taken.id) , :method => :post do
+= form_tag next_survey_question_url(@survey_taken.id) , :method => :post, :id => 'answer_question' do
   %p
     Geef de vertaling van het woord
     %h2= @question.word.original

@@ -1,6 +1,6 @@
 %h3= "Test: #{@survey.name}"
 
-%table.grid.hidden
+%table.grid.hidden.words-grid
   %thead
     %tr
       %th Woord
@@ -13,8 +13,8 @@
           %td= word.translation
 
 %div
-  = switch_visibility_link("Toon alle woorden", '#show-words-link', '.grid, #hide-words-link', '', 'show-words-link')
-  = switch_visibility_link("Verberg alle woorden", '#hide-words-link, .grid', '#show-words-link', 'hidden', 'hide-words-link')
+  = switch_visibility_link("Toon alle woorden", '#show-words-link', '.words-grid, #hide-words-link', '', 'show-words-link')
+  = switch_visibility_link("Verberg alle woorden", '#hide-words-link, .words-grid', '#show-words-link', 'hidden', 'hide-words-link')
 
 %h3 Resultaten
 
@@ -38,6 +38,8 @@
 -else
   %p Nog niet getest.
 
+= link_to t('survey.take_test'), take_survey_path(@survey)
+\|
 = link_to t('common.edit'), edit_survey_path(@survey)
 \|
 = link_to t('common.back'), surveys_path

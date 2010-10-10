@@ -8,15 +8,11 @@ To Do
 
 * make language an option (use http-accepts header?)
 
-* voorzie ergens dat de gebruiker contact kan opnemen en opmerkingen/suggesties kan sturen
+* allow for a user to have contact and send remarks/suggestions
 
-* reset-password procedure doortesten en alle teksten verbeteren en correct vertalen
+* test the password-reset procedure en correct all texts and translate correctly
 
-* verwijderen van testen lukt nog niet
-
-* bij tonen v/e test:
-  X maak lijst van woorden optioneel (wordt soms erg lang) (paginatie?)
-  - switch volgorde om: eerst test-resultaten dan woorden
+* removing surveys does not work
 
 * bij tonen test-resultaten
   X gebruik kleine ikoontjes
@@ -28,19 +24,27 @@ To Do
   - mss moet ik nog wat indexen aanmaken?
 
 * add admin-part, a console, where i can see the users/tests/.. some reports ...
-  - add graphs to admin-part: use flot/flotilla?
+
+* add graphs
+  - to admin-part: use flot/flotilla?
+  - to survey overview (single survey? all surveys?)
 
 * at the survey-show screen: also show a graph of the results of the different tests, if more than 1 result!
 
 * investigate whether it is possible to only test the wrong words again after a test?
 
-* sometimes the user can enter empty words by accident; how to prevent this?
-  should we always give an answer? So we make it a required field.
-  We use client-side validation using jquery.validate
 
 -------------------------
 Done
 -------------------------
+
+X sometimes the user can enter empty words by accident; how to prevent this?
+  should we always give an answer? So we make it a required field.
+  We use client-side validation using jquery.validate
+
+X bij tonen v/e test:
+  X maak lijst van woorden optioneel (wordt soms erg lang) (paginatie?)
+  X switch volgorde om: eerst test-resultaten dan woorden
 
 X toon de hoogst behaalde score in het overzicht (surveys#index)
 
