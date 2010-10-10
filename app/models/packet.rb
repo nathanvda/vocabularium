@@ -1,5 +1,5 @@
 class Packet < ActiveRecord::Base
-  has_many :words
+  has_many :words, :dependent => :delete_all
   has_many :survey_packets
   has_many :surveys, :through => :survey_packets
   validates_presence_of :name

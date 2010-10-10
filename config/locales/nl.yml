@@ -52,6 +52,12 @@ nl:
       answer: Je antwoord
       next: Volgende
       done: Toon resultaat
+  packet:
+    is_deleted: De woordenlijst is verwijderd
+    cannot_be_deleted: De woordenlijst %{name} kan niet verwijderd worden omdat die in een test wordt gebruikt.
+    is_made: De woordenlijst is aangemaakt.
+    is_updated: De woordenlijst is aangepast.
+    delete_you_sure: Ben je zeker dat je deze woordenlijst wilt verwijderen?
   home:
     index:
       short_description: Op deze website kan je zelf woordenlijsten samenstellen en je laten testen.

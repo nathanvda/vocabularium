@@ -22,7 +22,7 @@ class PacketsController < ApplicationController
     @packet.user_id = current_user.id
 
     if @packet.save
-      redirect_to(@packet, :notice => 'Woordenlijst aangemaakt.')
+      redirect_to(@packet, :notice => t('packet.is_made'))
     else
       render :action => "new"
     end
@@ -30,16 +30,20 @@ class PacketsController < ApplicationController
 
   def update
     if @packet.update_attributes(params[:packet])
-      redirect_to(@packet, :notice => 'Woordenlijst is aangepast.')
+      redirect_to(@packet, :notice => t('packet.is_updated'))
     else
       render :action => "edit"
     end
   end
 
   def destroy
-    @packet.destroy
-
-    redirect_to(packets_url)
+    if @packet.surveys.size == 0
+      @packet.destroy
+      flash[:notice] = t('packet.is_deleted')
+    else
+      flash[:warning] = t('packet.cannot_be_deleted', :name => @packet.name)
+    end
+    redirect_to packets_url
   end
 
 
