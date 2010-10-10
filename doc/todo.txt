@@ -10,9 +10,6 @@ To Do
 
 * allow for a user to have contact and send remarks/suggestions
 
-* test the password-reset procedure en correct all texts and translate correctly
-
-
 * bij tonen test-resultaten
   X gebruik kleine ikoontjes
   X toon alleen foute woorden (en optioneel de juiste)
@@ -25,10 +22,8 @@ To Do
 * add admin-part, a console, where i can see the users/tests/.. some reports ...
 
 * add graphs
-  - to admin-part: use flot/flotilla?
+  - to admin-part: use flot/flotilla? --> jqPlot!!
   - to survey overview (single survey? all surveys?)
-
-* at the survey-show screen: also show a graph of the results of the different tests, if more than 1 result!
 
 * investigate whether it is possible to only test the wrong words again after a test?
 
@@ -36,6 +31,8 @@ To Do
 -------------------------
 Done
 -------------------------
+
+X test the password-reset procedure en correct all texts and translate correctly
 
 X removing surveys does not work
 

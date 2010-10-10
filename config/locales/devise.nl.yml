@@ -27,6 +27,9 @@ nl:
       signed_up: 'Je bent nu geregisteerd.'
       updated: 'Je hebt je account succesvol aangepast.'
       destroyed: 'Dag! Je account is nu verwijderd. We hopen je snel weer te zien.'
+      reset_title: Paswoord vergeten?
+      email: Email
+      send_reset: Stuur me de instructies om mijn paswoord te resetten
     unlocks:
       send_instructions: 'Je zal zo meteen een e-mail ontvangen met instructies hoe je je account kan unlocken.'
       unlocked: 'Jouw account is unlocked. Je bent nu aangemeld.'
@@ -34,7 +37,13 @@ nl:
       confirmation_instructions:
         subject: 'Bevestiging instructies'
       reset_password_instructions:
-        subject: 'Reset paswoord instructies'
+        subject: 'Reset paswoord instructies voor Vocubularium'
+        title: Hallo #{name}!
+        desc_line1: 'Iemand heeft de link gevraagd om je paswoord op vocabularium.dixis.com te wijzigen. Je kan dat doen door op onderstaande link te klikken:'
+        desc_line2: Als je hier niet om gevraagd heeft, dan kun je deze mail gerust negeren.
+        desc_line3: Je paswoord voor vocubalarium.dixis.com wordt pas gewijzigd als je de bovenstaande link gebruikt, en je paswoord verandert.
+        change_password: Verander mijn paswoord
+
       unlock_instructions:
         subject: 'Unlock Instructies'
     form:
