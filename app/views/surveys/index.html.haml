@@ -21,7 +21,7 @@
         = link_to t('survey.take_test'), take_survey_path(survey)
         = link_to t('common.show'), survey
         = link_to t('common.edit'), edit_survey_path(survey)
-        = link_to t('common.destroy'), survey, :confirm => t('common.you_sure'), :method => :delete
+        = link_to t('common.destroy'), survey_path(survey), :confirm => t('survey.delete_you_sure'), :method => :delete
 
 %br
 

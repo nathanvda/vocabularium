@@ -40,9 +40,8 @@ class SurveysController < ApplicationController
 
 
   def destroy
-    @survey.destroy
-
-    redirect_to(surveys_url)
+    Survey.delete(params[:id])
+    redirect_to(surveys_url, :notice => 'Test is verwijderd.')
   end
 
   def take

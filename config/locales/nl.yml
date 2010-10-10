@@ -46,6 +46,7 @@ nl:
     not_taken_yet: Nog niet getest
     take_test: Doe de test
     make_new: Nieuwe test aanmaken
+    delete_you_sure: Ben je zeker dat je deze test wilt verwijderen? Alle test-resultaten voor deze test zullen onherroepelijk verloren gaan.
   survey_taken:
     labels:
       answer: Je antwoord

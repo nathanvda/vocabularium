@@ -28,5 +28,15 @@ class Survey < ActiveRecord::Base
     end
   end
 
+  def self.delete(survey_id)
+    # use sql queries instead
+    ActiveRecord::Base.transaction do
+      Survey.connection.execute("delete from survey_questions where survey_taken_id in (select id from survey_takens where survey_id=#{survey_id})")
+      Survey.connection.execute("delete from survey_takens where survey_id=#{survey_id}")
+      Survey.connection.execute("delete from survey_packets where survey_id=#{survey_id}")
+      Survey.connection.execute("delete from surveys where id=#{survey_id}")
+    end
+  end
+
   scope :owned_by, lambda { |user| where("user_id = ?", user.id) }
 end

@@ -12,7 +12,6 @@ To Do
 
 * test the password-reset procedure en correct all texts and translate correctly
 
-* removing surveys does not work
 
 * bij tonen test-resultaten
   X gebruik kleine ikoontjes
@@ -37,6 +36,8 @@ To Do
 -------------------------
 Done
 -------------------------
+
+X removing surveys does not work
 
 X sometimes the user can enter empty words by accident; how to prevent this?
   should we always give an answer? So we make it a required field.
