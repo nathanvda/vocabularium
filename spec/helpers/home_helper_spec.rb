@@ -1,15 +1,39 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the HomeHelper. For example:
-#
-# describe HomeHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
 describe HomeHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "home_link_to_new_test" do
+    before (:each) do
+      @user = Factory(:user)
+    end
+
+    it "should show no link if the user has no packets" do
+      helper.home_link_to_new_test(@user).should ==
+              "<td class=\"disabled\">#{I18n.t('home.index.add_survey')}</td>"
+    end
+
+    it "should show the link if the uses has packets" do
+      @user.stub(:packets).and_return([1,24,4])
+      helper.home_link_to_new_test(@user).should ==
+           "<td><a href=\"/surveys/new\">#{I18n.t('home.index.add_survey')}</a></td>"
+
+    end
+  end
+
+  describe "home_link_to_do_test" do
+    before (:each) do
+      @user = Factory(:user)
+    end
+
+    it "should show no link if the user has no surveys" do
+      helper.home_link_to_do_test(@user).should ==
+              "<td class=\"disabled\">#{I18n.t('home.index.do_test')}</td>"
+    end
+
+    it "should show the link if the uses has packets" do
+      @user.stub(:surveys).and_return([1,24,4])
+      helper.home_link_to_do_test(@user).should ==
+           "<td><a href=\"/surveys\">#{I18n.t('home.index.do_test')}</a></td>"
+
+    end
+  end
 end

@@ -133,6 +133,7 @@ describe PacketsController do
       mock_finder = mock(Packet)
       mock_finder.stub(:find).with("37") { mock_packet }
       Packet.stub(:owned_by) { mock_finder }
+      mock_packet.stub(:surveys).and_return([])
       mock_packet.should_receive(:destroy)
       delete :destroy, :id => "37"
     end

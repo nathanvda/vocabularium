@@ -1,15 +1,20 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the SurveyTakensHelper. For example:
-#
-# describe SurveyTakensHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
 describe SurveyTakensHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "get_question_answer" do
+    before (:each) do
+      @question = mock(SurveyQuestion)
+      @question.stub(:answer).and_return("answer")
+      RAILS_ASSET_ID=1
+      ActionController::Base.config.asset_path = proc { |asset_path| asset_path }
+    end
+    it "should render correct question" do
+      @question.stub(:is_correct?).and_return(true)
+      helper.get_question_answer(@question).should == " <img alt=\"Tick\" src=\"/images/tick.png\" />&nbsp;answer"
+    end
+    it "should render incorrect question" do
+      @question.stub(:is_correct?).and_return(false)
+      helper.get_question_answer(@question).should == " <img alt=\"Cross\" src=\"/images/cross.png\" />&nbsp;answer"
+    end
+  end
 end
