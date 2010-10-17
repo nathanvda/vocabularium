@@ -2,6 +2,9 @@
 To Do
 -------------------------
 
+* allow that a user can use a word-list in the reverse direction.
+  So use the translations as the questions instead of the answers.
+
 * add more tests!!!!
 
 * localise all texts + supply english translations
@@ -13,7 +16,7 @@ To Do
 * bij tonen test-resultaten
   X gebruik kleine ikoontjes
   X toon alleen foute woorden (en optioneel de juiste)
-  - verzeker/verifieer: correctheid ve vraag mag NIET opnieuw berekend worden!!
+  - !!! correctheid ve vraag mag NIET opnieuw berekend worden!!
 
 * bij afnemen test:
   - versnel het naar de volgende vraag/woord gaan? nodig? (was traag op Kate's pc)
