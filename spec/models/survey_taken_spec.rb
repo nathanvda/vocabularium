@@ -26,5 +26,22 @@ describe SurveyTaken do
       @survey_taken.current_question.should == 0
     end
 
+    context "calculating the result" do
+      it "should calculate the result" do
+        mock_question1 = mock(SurveyQuestion)
+        mock_question1.stub(:is_correct?).and_return(true)
+        mock_question2 = mock(SurveyQuestion)
+        mock_question2.stub(:is_correct?).and_return(false)
+        mock_questions_array = mock(Array)
+        mock_questions_array.stub(:all).and_return([mock_question1, mock_question2])
+        @survey_taken.stub(:survey_questions).and_return(mock_questions_array)
+        @survey_taken.calculate_result
+        @survey_taken.nr_correct.should == 1
+        @survey_taken.score.should == 50.0
+      end
+    end
+
+    it "should create a survey-taken from a survey"
+
   end
 end
