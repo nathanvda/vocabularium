@@ -23,4 +23,10 @@ describe HomeController do
     end
   end
 
+  describe 'current_tab' do
+    it "returns :root" do
+      controller.current_tab.should == :root
+    end
+  end
+
 end

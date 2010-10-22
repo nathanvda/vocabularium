@@ -128,4 +128,16 @@ describe SurveysController do
     end
   end
 
+  describe "GET take" do
+
+    it "redirects to survey-taken" do
+      mock_survey_taken = mock_model(SurveyTaken, {}).as_null_object
+      Survey.stub(:find) { mock_survey }
+      SurveyTaken.stub(:prepare_test).with(mock_survey).and_return(mock_survey_taken)
+      get :take, :id => 37
+      response.should redirect_to(survey_taken_url(mock_survey_taken))
+    end
+
+  end
+
 end
