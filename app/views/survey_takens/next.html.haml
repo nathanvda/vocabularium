@@ -21,7 +21,7 @@
       %th Juist antwoord
   %tbody
     - @survey_taken.survey_questions.each do |question|
-      %tr{:class => "#{question.is_correct? ? 'correct hidden' : 'wrong'}"}
+      %tr{:class => "#{question.is_answer_correct? ? 'correct hidden' : 'wrong'}"}
         %td= question.order
         %td= question.word.original
         %td!= get_question_answer(question)

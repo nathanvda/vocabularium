@@ -2,13 +2,20 @@ class SurveyQuestion < ActiveRecord::Base
   belongs_to :survey_taken
   belongs_to :word
 
-  def is_correct?
+  def is_answer_correct?
     # naive approach
-    is_correct ||= is_answer_correct?
+    correctness = read_attribute(:is_correct)
+    if correctness.blank?
+      correctness = calcalute_answer_correctness
+      update_attribute(:is_correct, correctness)
+      correctness
+    else
+      correctness
+    end
   end
 
   # calculates if the given answer corresponds to the
-  def is_answer_correct?
+  def calcalute_answer_correctness
     answer_arr = convert_to_comparable_parts(answer)
     correct_arr = convert_to_comparable_parts(word.translation)
     answer_arr.sort == correct_arr.sort

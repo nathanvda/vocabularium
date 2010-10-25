@@ -1,6 +1,6 @@
 module SurveyTakensHelper
   def get_question_answer(question)
-    icon = if question.is_correct?
+    icon = if question.is_answer_correct?
       image_tag('tick.png')
     else
       image_tag('cross.png')
