@@ -4,6 +4,6 @@ class AddWordsIndex < ActiveRecord::Migration
   end
 
   def self.down
-    remove_index :survey_takens, :word_id
+    remove_index :survey_questions, :word_id
   end
 end

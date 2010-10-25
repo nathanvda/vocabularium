@@ -1,0 +1,11 @@
+= form_for @user_language do |f|
+  = error_messages_for(@user_language)
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :abbr
+    = f.text_field :abbr
+  .actions
+    = f.submit 'Save'

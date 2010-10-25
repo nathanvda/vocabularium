@@ -1,0 +1,23 @@
+%h1 Listing user_languages
+
+%table
+  %tr
+    %th Name
+    %th Abbr
+    %th User
+    %th
+    %th
+    %th
+
+  - @user_languages.each do |user_language|
+    %tr
+      %td= user_language.name
+      %td= user_language.abbr
+      %td= user_language.user_id
+      %td= link_to 'Show', user_language
+      %td= link_to 'Edit', edit_user_language_path(user_language)
+      %td= link_to 'Destroy', user_language, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New User language', new_user_language_path

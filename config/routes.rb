@@ -1,5 +1,7 @@
 Vocabularium::Application.routes.draw do
 
+  resources :user_languages
+
   match "survey_takens/:id" => 'survey_takens#show', :as => 'survey_taken'
 
   post "survey_takens/:id/next" => 'survey_takens#next', :as => 'next_survey_question'

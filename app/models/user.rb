@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :surveys
   has_many :packets
+  has_many :user_languages
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :fullname

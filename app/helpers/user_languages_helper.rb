@@ -1,0 +1,2 @@
+module UserLanguagesHelper
+end

@@ -5,6 +5,16 @@ TEST_EMAIL = "bla@bla.com"
 TEST_FULL_NAME = "Tester met volledige Naam"
 
 describe User do
+
+  before (:each) do
+    @user_language = Factory(:user_language)
+  end
+
+  it {should have_many(:user_languages)}
+  it {should have_many(:packets)}
+  it {should have_many(:surveys)}
+
+
   describe "show_name" do
     it "returns name if that is set" do
       u = User.new(:name => TEST_NAME, :email => TEST_EMAIL, :fullname => TEST_FULL_NAME)
