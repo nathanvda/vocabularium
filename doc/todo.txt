@@ -4,6 +4,8 @@ To Do
 
 * allow that a user can use a word-list in the reverse direction.
   So use the translations as the questions instead of the answers.
+  - make sure user languages have an unique name-abbr .. per user!!
+
 
 * add more tests!!!!
 

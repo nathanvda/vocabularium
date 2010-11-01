@@ -4,6 +4,13 @@
   .field
     = f.label :name, t('activerecord.attributes.packet.name')
     = f.text_field :name
+  .field
+    = f.label :original_user_language_id, t('activerecord.attributes.packet.original_user_language_id')
+    = f.collection_select :original_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
+  .field
+    = f.label :translated_to_user_language_id, t('activerecord.attributes.packet.translated_to_user_language_id')
+    = f.collection_select :translated_to_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
+
 
   %h3 Woorden
   %p Let er zeker op dat je de woorden correct invult, zodat je ook correct overhoord wordt.

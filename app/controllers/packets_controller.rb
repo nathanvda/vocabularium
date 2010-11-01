@@ -1,6 +1,7 @@
 class PacketsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :find_packet, :only => [:show, :edit, :update, :destroy]
+  before_filter :find_languages, :only => [:new, :edit]
 
   def index
     @packets = Packet.owned_by(current_user)
@@ -53,4 +54,9 @@ class PacketsController < ApplicationController
   def find_packet
     @packet = Packet.owned_by(current_user).find(params[:id])
   end
+
+  def find_languages
+    @languages = UserLanguage.owned_by(current_user)
+  end
+
 end

@@ -31,6 +31,8 @@ nl:
         name: Naam
       packet:
         name: Naam
+        original_user_language_id: Originele taal
+        translated_to_user_language_id: Vertaald naar
 
   tabs:
     root: Home
