@@ -169,25 +169,7 @@ h1 + form{
 form{
     @include local_input_field;
 
-    div{
-        margin: 0 0 10px 0;
-    }
-
-    label{
-        clear:left;
-        display: block;
-        float: left;
-        width: 170px;
-    }
-
-    input[type="checkbox"], input[type="submit"] {
-        margin-left: 170px;
-    }
-
-    input + label{
-        display: inline;
-        float: none;
-    }
+    @include form_fields(170px);
 }
 
 .fields {
@@ -200,3 +182,10 @@ input[type="submit"]{
     @include button_background_gradient($button_light_background_color, $button_dark_background_color);
     @include button($button_border_top_color, $button_border_right_color, $button_border_bottom_color, $button_border_left_color);
 }
+
+// dialog styling
+#add_language_box {
+    @include form_fields(100px);
+}
+
+

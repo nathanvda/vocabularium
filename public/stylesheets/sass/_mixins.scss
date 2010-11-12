@@ -79,3 +79,26 @@
         padding: 3px 5px;
     }
 }
+
+@mixin form_fields($column_width){
+    div{
+        margin: 0 0 10px 0;
+    }
+
+    label{
+        clear:left;
+        display: block;
+        float: left;
+        width: $column_width;
+    }
+
+    input[type="checkbox"], input[type="submit"] {
+        margin-left: $column_width;
+    }
+
+    input + label{
+        display: inline;
+        float: none;
+    }
+}
+

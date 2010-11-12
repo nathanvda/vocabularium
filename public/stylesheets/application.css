@@ -218,3 +218,16 @@ input[type="submit"] {
     background: -moz-linear-gradient(-90deg, #fafafa, #d9d9d9) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#d9d9d9)) repeat scroll 0 0 transparent;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F0F0F0F0+10, endColorstr=#CFCFCFCF+10); }
+
+#add_language_box div {
+  margin: 0 0 10px 0; }
+#add_language_box label {
+  clear: left;
+  display: block;
+  float: left;
+  width: 100px; }
+#add_language_box input[type="checkbox"], #add_language_box input[type="submit"] {
+  margin-left: 100px; }
+#add_language_box input + label {
+  display: inline;
+  float: none; }

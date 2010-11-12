@@ -10,7 +10,18 @@
   .field
     = f.label :translated_to_user_language_id, t('activerecord.attributes.packet.translated_to_user_language_id')
     = f.collection_select :translated_to_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
+    = link_to 'Maak een nieuwe taal aan', '#', :id => 'make_new_language_link'
 
+  #add_language_box{:title => "Voeg een nieuwe taal toe"}
+    .validate_tips
+      %p Alle velden moeten ingevuld worden.
+    .fields
+      .field
+        = label_tag :language_name, "Taal"
+        = text_field_tag :language_name
+      .field
+        = label_tag :language_abbr, 'Afkorting'
+        = text_field_tag :language_abbr
 
   %h3 Woorden
   %p Let er zeker op dat je de woorden correct invult, zodat je ook correct overhoord wordt.
