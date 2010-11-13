@@ -22,9 +22,11 @@ nl:
           other: "Kon {{model}} niet opslaan: {{count}} fouten."
       messages:
         blank: Gelieve het veld %{attribute} in te vullen!
+        taken: is reeds in gebruik
     models:
       survey: test
       packet: woordenlijst
+      user_language: taal
       user: gebruiker
     attributes:
       survey:
@@ -33,6 +35,10 @@ nl:
         name: Naam
         original_user_language_id: Originele taal
         translated_to_user_language_id: Vertaald naar
+      user_language:
+        name: Taal
+        abbr: Afkorting
+
 
   tabs:
     root: Home

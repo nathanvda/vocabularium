@@ -1,0 +1,13 @@
+#languages_selection
+  .field
+    = label_tag :packet_original_user_language_id, t('activerecord.attributes.packet.original_user_language_id')
+    /= f.collection_select :original_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
+    - select_collection = options_from_collection_for_select(@languages, "id", "name", @packet.original_user_language_id)
+    = select_tag :packet_original_user_language_id, select_collection, {:prompt => "-kies een taal", :class =>"language-bla"}
+
+  .field
+    = label_tag :packet_translated_to_user_language_id, t('activerecord.attributes.packet.translated_to_user_language_id')
+    - select_collection = options_from_collection_for_select(@languages, "id", "name", @packet.translated_to_user_language_id)
+    = select_tag :packet_translated_to_user_language_id, select_collection, {:prompt => "-kies een taal", :class =>"language-bla" }
+  of
+  = link_to 'Maak een nieuwe taal aan', '#', :id => 'make_new_language_link'
