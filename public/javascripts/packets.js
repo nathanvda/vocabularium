@@ -44,6 +44,7 @@ $(function() {
 	    abbr      = $( "#language_abbr" ),
         allFields = $( [] ).add( language ).add( abbr ),
         tips      = $( ".validate_tips > p" ),
+        packet_id = $('form').attr('id');
         language_validation_tips = '';
 
 
@@ -67,7 +68,6 @@ $(function() {
     }
 
 
-
     $('#add_language_box').dialog({
         	autoOpen: false,
 			height: 250,
@@ -83,9 +83,31 @@ $(function() {
 					abbrValid     = checkHasValue( abbr,     "afkorting" );
 
 					if ( languageValid && abbrValid ) {
-                        alert('het is goed ingevuld!')
-						$( this ).dialog( "close" );
-					}
+                        /*
+                        $.post('/packets/add_language',
+                                { language_name: language.val(), language_abbr: abbr.val(), id: packet_id},
+                                function(data) {
+                                    $("#languages_selection").replaceWith(data);
+                                }
+                        ); */
+                        var succeeded = false;
+                        $.ajax({
+                            url: '/packets/add_language',
+                            type: 'POST',
+                            data: { language_name: language.val(), language_abbr: abbr.val(), id: packet_id},
+                            succes: function(data) {
+                                $("#languages_selection").replaceWith(data);
+                                succeeded = true;
+                            },
+                            error: function(req, status, error) {
+                                alert(req.responseText);
+                            }
+                        }
+                        );
+                        if (succeeded) {
+                            $( this ).dialog( "close" );
+                        }
+                    }
                     else
                     {
                         updateTips(language_validation_tips)
@@ -101,7 +123,7 @@ $(function() {
 
     });
 
-    $( "#make_new_language_link" ).click(function() {
+    $( "#make_new_language_link" ).live('click', function() {
         $( "#add_language_box" ).dialog( "open" );
         return false;
     });

@@ -6,7 +6,11 @@ Vocabularium::Application.routes.draw do
 
   post "survey_takens/:id/next" => 'survey_takens#next', :as => 'next_survey_question'
 
-  resources :packets
+  resources :packets do
+    collection do
+      post 'add_language'
+    end
+  end
 
   resources :courses
 

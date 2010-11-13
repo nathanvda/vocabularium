@@ -4,13 +4,7 @@
   .field
     = f.label :name, t('activerecord.attributes.packet.name')
     = f.text_field :name
-  .field
-    = f.label :original_user_language_id, t('activerecord.attributes.packet.original_user_language_id')
-    = f.collection_select :original_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
-  .field
-    = f.label :translated_to_user_language_id, t('activerecord.attributes.packet.translated_to_user_language_id')
-    = f.collection_select :translated_to_user_language_id, @languages, :id, :name, options ={:prompt => "-kies een taal"}, :class =>"language-bla"
-    = link_to 'Maak een nieuwe taal aan', '#', :id => 'make_new_language_link'
+  = render :partial => 'languages'
 
   #add_language_box{:title => "Voeg een nieuwe taal toe"}
     .validate_tips
