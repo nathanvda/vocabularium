@@ -4,21 +4,32 @@ To Do
 
 * allow that a user can use a word-list in the reverse direction.
   So use the translations as the questions instead of the answers.
-  - make sure user languages have an unique name-abbr .. per user!!
+  x make sure user languages have an unique name-abbr .. per user!!
+  X user must set the original and translated language when creating
+  x user can add languages from within the packet-screen using a dialog
+  - show option to reverse the test (from-> to and to->from)
+  - enable tests to be taken in the reverse order
+  - manage languages in a seperate screen
+  - the dialog should be styled more in the site's design (now it stands out)
+
+* investigate whether it is possible to only test the wrong words again after a test?
+  - e.g. retest only wrong words, and count number of retests.
+  - a retest does not change the order
+  - only wrong answers are asked again and recorded. Only the total result is shown.
 
 
-* add more tests!!!!
+
+-------------------------
+ Low priority
+-------------------------
+
+* add more tests!!!!  --> improve code coverage
 
 * localise all texts + supply english translations
 
 * make language an option (use http-accepts header?)
 
 * allow for a user to have contact and send remarks/suggestions
-
-* bij tonen test-resultaten
-  X gebruik kleine ikoontjes
-  X toon alleen foute woorden (en optioneel de juiste)
-  - !!! correctheid ve vraag mag NIET opnieuw berekend worden!!
 
 * bij afnemen test:
   - versnel het naar de volgende vraag/woord gaan? nodig? (was traag op Kate's pc)
@@ -30,12 +41,17 @@ To Do
   - to admin-part: use flot/flotilla? --> jqPlot!!
   - to survey overview (single survey? all surveys?)
 
-* investigate whether it is possible to only test the wrong words again after a test?
+
 
 
 -------------------------
 Done
 -------------------------
+
+x bij tonen test-resultaten
+  X gebruik kleine ikoontjes
+  X toon alleen foute woorden (en optioneel de juiste)
+  X !!! correctheid ve vraag mag NIET opnieuw berekend worden!!
 
 X test the password-reset procedure en correct all texts and translate correctly
 
