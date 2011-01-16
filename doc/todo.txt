@@ -17,7 +17,12 @@ To Do
   - a retest does not change the order
   - only wrong answers are asked again and recorded. Only the total result is shown.
 
-
+* stability:
+  - if the user presses back, and winds up in an already seen answer, then gives the answer for that question,
+    it will be stored in the current question, and proceed with the next question.
+    This is very confusing for the user.
+    It should return to the current question, with a message that you cannot edit previous
+    answers or something similar
 
 -------------------------
  Low priority
@@ -47,6 +52,8 @@ To Do
 -------------------------
 Done
 -------------------------
+
+x tab in editing packets (word-lists) is now fixed
 
 x bij tonen test-resultaten
   X gebruik kleine ikoontjes

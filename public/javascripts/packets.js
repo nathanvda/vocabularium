@@ -5,7 +5,7 @@ function set_last_textbox() {
 }
 
 function set_focus_to_next_field(elm) {
-    $(elm).parent().parent().next().children(':first').children(':nth-child(2)').focus();
+    $(elm).parent().parent().nextAll('div').first().children(':first').children(':nth-child(2)').focus();
 }
 
 $(function() {
