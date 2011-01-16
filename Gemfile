@@ -34,8 +34,8 @@ gem "rcov"
 
 # we need this here, see http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test do
-  #gem "rspec-rails", ">= 2.0.0.beta.18"
-  gem "rspec-rails", :git => 'http://github.com/rspec/rspec-rails.git'
+  gem "rspec-rails", ">= 2.4.0"
+  #gem "rspec-rails", :git => 'http://github.com/rspec/rspec-rails.git'
   gem "autotest"
   gem 'simplecov', :require => false
 end
@@ -43,11 +43,11 @@ end
 # test-environment gems
 group :test, :spec, :cucumber do
   gem "factory_girl_rails"
-  #gem "rspec",                   ">= 2.0.0.beta.18"
-  gem "rspec",              :git => "git://github.com/rspec/rspec.git"
-  gem "rspec-core",         :git => "git://github.com/rspec/rspec-core.git"
-  gem "rspec-expectations", :git => "git://github.com/rspec/rspec-expectations.git"
-  gem "rspec-mocks",        :git => "git://github.com/rspec/rspec-mocks.git"
+  gem "rspec",                   ">= 2.4.0"
+#  gem "rspec",              :git => "git://github.com/rspec/rspec.git"
+#  gem "rspec-core",         :git => "git://github.com/rspec/rspec-core.git"
+#  gem "rspec-expectations", :git => "git://github.com/rspec/rspec-expectations.git"
+#  gem "rspec-mocks",        :git => "git://github.com/rspec/rspec-mocks.git"
   gem "remarkable",              ">=4.0.0.alpha2"
   gem "remarkable_activemodel",  ">=4.0.0.alpha2"
   gem "remarkable_activerecord", ">=4.0.0.alpha2"
