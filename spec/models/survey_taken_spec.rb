@@ -28,12 +28,12 @@ describe SurveyTaken do
 
     context "calculating the result" do
       it "should calculate the result" do
-        mock_question1 = mock(SurveyQuestion)
-        mock_question1.stub(:is_correct?).and_return(true)
-        mock_question2 = mock(SurveyQuestion)
-        mock_question2.stub(:is_correct?).and_return(false)
+        @word1 = Factory(:word, :translation => "pair")
+        @question1 = Factory(:survey_question, :answer => "pair", :word_id => @word1.id, :survey_taken_id => @survey_taken.id)
+        @word2 = Factory(:word, :translation => "paaaaar")
+        @question2 = Factory(:survey_question, :answer => "paiiiiiir", :word_id => @word2.id, :survey_taken_id => @survey_taken.id)
         mock_questions_array = mock(Array)
-        mock_questions_array.stub(:all).and_return([mock_question1, mock_question2])
+        mock_questions_array.stub(:all).and_return([@question1, @question2])
         @survey_taken.stub(:survey_questions).and_return(mock_questions_array)
         @survey_taken.calculate_result
         @survey_taken.nr_correct.should == 1

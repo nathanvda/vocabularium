@@ -22,7 +22,7 @@ class SurveyTaken < ActiveRecord::Base
   def calculate_result
     correct=0
     survey_questions.all.each do |question|
-      correct = correct + 1 if question.is_correct?
+      correct = correct + 1 if question.is_answer_correct?
     end
     update_attribute(:nr_correct, correct)
     update_attribute(:score, 100.0 * correct/nr_questions)
