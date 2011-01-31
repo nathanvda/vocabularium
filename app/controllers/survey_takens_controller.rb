@@ -14,9 +14,16 @@ class SurveyTakensController < ApplicationController
     if @survey_taken.current_question == @survey_taken.nr_questions
       # calculate result of test
       @survey_taken.calculate_result
+      if request.xhr?
+        render 'next.html', :layout => false
+      end
     else
       get_current_question
-      render :action => :show
+      if request.xhr?
+        render :partial => 'current_question.html', :layout => false
+      else
+        render :action => 'show', :layout => false
+      end
     end
   end
 

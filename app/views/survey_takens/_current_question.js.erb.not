@@ -1,0 +1,1 @@
+$('#current_question').html(<%= render :partial => 'current_question.html', :layout => false %>);

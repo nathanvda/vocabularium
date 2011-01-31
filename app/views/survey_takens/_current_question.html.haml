@@ -1,0 +1,15 @@
+%p= "Vraag #{@survey_taken.current_question + 1}/#{@survey_taken.nr_questions}"
+
+= form_tag next_survey_question_url(@survey_taken.id) , :method => :post, :id => 'answer_question', :remote => true do
+  %p
+    Geef de vertaling van het woord
+    %h2= @question.word.original
+  .field
+    = label_tag :answer, t('survey_taken.labels.answer')
+    = text_field_tag :answer, '', :class => "autofocus", :autocomplete => "off"
+  .field
+    = submit_tag t('survey_taken.labels.next')
+    = image_tag('working.gif', :id => 'loading', :style => 'display:none;')
+
+:javascript
+  $("form#answer_question .autofocus").focus();
